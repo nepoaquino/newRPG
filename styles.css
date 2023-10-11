@@ -49,18 +49,16 @@ header {
     background-position: 0% 50%;
   }
 }
-.startGameButtonContainer{
+.startGameButtonContainer {
   position: absolute;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.startGameButtonContainer #startGameButton {
- 
+.startGameButtonContainer img {
   cursor: pointer;
   width: 50vmin;
-  height: auto; /* Ensures the aspect ratio is maintained */
- 
+  height: auto; 
 }
 
 #startGameButton:hover,
