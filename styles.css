@@ -27,19 +27,15 @@ header {
   display: block; /* BLOCK / NONE */
 }
 
-header h1 {
-  text-align: center;
+#gameTitleImage {
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5em;
-  color: transparent;
-  background-size: 350% 100%;
-  animation: color-change 5s ease infinite;
-  background-image: radial-gradient(circle, #ffcb6a, #000000, #000000);
-  background-clip: text;
-  -webkit-background-clip: text; /* For webkit-based browsers */
+}
+#gameTitleImage img {
+  width: 100vmin;
+  height: auto; /* Ensures the aspect ratio is maintained */
 }
 
 @keyframes color-change {
@@ -53,28 +49,23 @@ header h1 {
     background-position: 0% 50%;
   }
 }
-
-#startGameButton {
+.startGameButtonContainer{
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.2em;
-  padding: 5px 10px;
-  background-color: #dac588;
-  border: 1vmin solid #d6ac6d;
-  border-radius: 5%;
-  color: #333;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  font-family: cursive;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.startGameButtonContainer #startGameButton {
+ 
   cursor: pointer;
+  width: 50vmin;
+  height: auto; /* Ensures the aspect ratio is maintained */
+ 
 }
 
-#startGameButton:hover {
-  background-color: #eebd74;
-  transform: translate(-50%, -50%) scale(1.05);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+#startGameButton:hover,
+#startGameButton:active {
+  transform: scale(1.05);
 }
 
 #gameNavigation {
