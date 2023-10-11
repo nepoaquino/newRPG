@@ -28,6 +28,8 @@ body {
 }
 
 img {
+  -webkit-user-select: none; /* Prevent selection on iOS devices */
+  user-select: none; /* Prevents the user from selecting the image */
   pointer-events: none; /* Disable click events on the link or images */
 }
 
@@ -95,7 +97,7 @@ header {
 
 h2 {
   position: absolute;
-  top: 8%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
