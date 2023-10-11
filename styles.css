@@ -27,6 +27,10 @@ body {
  
 }
 
+img {
+  pointer-events: none; /* Disable click events on the link or images */
+}
+
 header {
   display: block; /* BLOCK / NONE */
 }
@@ -63,6 +67,7 @@ header {
   cursor: pointer;
   width: 50vmin;
   height: auto;
+  pointer-events: auto; /* Enable click events on the link or images */
 }
 
 #startGameButton:hover,
@@ -90,7 +95,7 @@ header {
 
 h2 {
   position: absolute;
-  top: 5%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
