@@ -1,42 +1,43 @@
+/* Reset and global styles */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    pointer-events: auto; /* Allow click events on the link */
-    touch-callout: none;
-    -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
+
 html,
 body {
   color: white;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Ensure no content or padding causes overflow */
+  overflow: hidden;
   width: 100%;
   height: 100vh;
 }
 
+/* Body Styles */
 body {
   background-image: url("img/art04.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0; /* Ensure no margin is applied */
-  padding: 0; /* Ensure no padding is applied */
- 
+  margin: 0;
+  padding: 0;
 }
 
 img {
-  -webkit-user-select: none; /* Prevent selection on iOS devices */
-  user-select: none; /* Prevents the user from selecting the image */
-  pointer-events: none; /* Disable click events on the link or images */
+  pointer-events: none;
 }
 
+/* Header Styles */
 header {
-  display: block; /* BLOCK / NONE */
+  display: block;
 }
 
 #gameTitleImage {
@@ -45,33 +46,30 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 #gameTitleImage img {
   width: 100vmin;
-  height: auto; /* Ensures the aspect ratio is maintained */
+  height: auto;
 }
 
-@keyframes color-change {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+/* Start Game Button Styles */
 .startGameButtonContainer {
   position: absolute;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.startGameButtonContainer img {
+
+#startGameButton {
+  display: block;
   cursor: pointer;
-  width: 50vmin;
+  width: 100%;
   height: auto;
-  pointer-events: auto; /* Enable click events on the link or images */
+}
+
+#startGameButton img {
+  width: 100%;
+  height: 100%;
 }
 
 #startGameButton:hover,
@@ -79,24 +77,26 @@ header {
   transform: scale(1.05);
 }
 
+/* Game Navigation Styles */
 #gameNavigation {
-  display: none; /* FLEX / NONE */
+  display: none;
   justify-content: space-between;
 }
 
 #gameNavigation button {
   font-size: 1.1em;
   background-color: #dac588;
-  border: 1vmin solid #d6ac6d; /* Using viewport width units for border */
+  border: 1vmin solid #d6ac6d;
   border-radius: 5%;
   color: #333;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-family: cursive;
-  box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5); /* Using viewport width units for box shadow */
+  box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
   cursor: pointer;
   margin-top: 5px;
 }
 
+/* H2 Styles */
 h2 {
   position: absolute;
   top: 10%;
@@ -109,7 +109,7 @@ h2 {
   animation: color-change 5s ease infinite;
   background-image: radial-gradient(circle, #ffcb6a, #000000, #000000);
   background-clip: text;
-  -webkit-background-clip: text; /* For webkit-based browsers */
+  -webkit-background-clip: text;
 }
 
 @keyframes color-change {
@@ -124,13 +124,13 @@ h2 {
   }
 }
 
-/* Character selection section */
+/* Character Selection Section */
 #characterSelection {
-  display: none; /* FLEX / NONE */
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Center horizontally */
+  align-items: center;
+  height: 100vh;
 }
 
 .character {
@@ -140,8 +140,8 @@ h2 {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  width: calc(50% - 20px); /* Two columns on larger screens */
-  max-width: 300px; /* Limit maximum width for smaller screens */
+  width: calc(50% - 20px);
+  max-width: 300px;
 }
 
 .character img {
@@ -163,6 +163,7 @@ h2 {
   font-size: 1em;
 }
 
+/* Improved Game Navigation Button Styles */
 #gameNavigation button {
   margin-top: 10px;
   background-color: #eebd74;
@@ -172,8 +173,7 @@ h2 {
   font-size: 1em;
   padding: 5px 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #gameNavigation button:hover {
