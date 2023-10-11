@@ -6,7 +6,7 @@
 
 html,
 body {
-  color: wheat;
+  color: white;
   margin: 0;
   padding: 0;
   overflow: hidden; /* Ensure no content or padding causes overflow */
@@ -58,7 +58,7 @@ header {
 .startGameButtonContainer img {
   cursor: pointer;
   width: 50vmin;
-  height: auto; 
+  height: auto;
 }
 
 #startGameButton:hover,
@@ -150,7 +150,7 @@ h2 {
   font-size: 1em;
 }
 
-button {
+#gameNavigation button {
   margin-top: 10px;
   background-color: #eebd74;
   border: 1px solid #d6ac6d;
@@ -163,7 +163,7 @@ button {
     box-shadow 0.3s ease;
 }
 
-button:hover {
+#gameNavigation button:hover {
   background-color: #dac588;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
