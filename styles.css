@@ -63,8 +63,9 @@ header {
 #startGameButton {
   display: block;
   cursor: pointer;
-  width: 100%;
+  width: 40vmin;
   height: auto;
+ 
 }
 
 #startGameButton img {
