@@ -2,8 +2,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    pointer-events: auto; /* Allow click events on the link */
 }
-
 html,
 body {
   color: white;
@@ -21,6 +24,7 @@ body {
   background-attachment: fixed;
   margin: 0; /* Ensure no margin is applied */
   padding: 0; /* Ensure no padding is applied */
+ 
 }
 
 header {
