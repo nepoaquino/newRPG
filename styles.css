@@ -6,6 +6,8 @@
     -webkit-user-drag: none;
     -webkit-user-select: none;
     pointer-events: auto; /* Allow click events on the link */
+    touch-callout: none;
+    -webkit-touch-callout: none;
 }
 html,
 body {
