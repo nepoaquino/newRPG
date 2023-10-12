@@ -32,7 +32,7 @@ maleBtn.addEventListener("click", () => {
 });
 
 femaleBtn.addEventListener("click", () => {
-  hide(genderText);
+  genderText.innerHTML="Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
 });
