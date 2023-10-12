@@ -21,18 +21,18 @@ function show(element, display = "block") {
 startBtn.addEventListener("click", () => {
   hide(header);
   show(genderText);
-  show(genderSection, "flex");
+  show(genderSection, "flex"); // show as Flex
 });
 
 // When you click the male or female button
 maleBtn.addEventListener("click", () => {
   genderText.innerHTML="Select Role";
   hide(genderSection);
-  show(classSection, "grid");
+  show(classSection, "grid"); // show as Grid
 });
 
 femaleBtn.addEventListener("click", () => {
   hide(genderText);
   hide(genderSection);
-  show(classSection, "grid");
+  show(classSection, "grid"); // show as Grid
 });
