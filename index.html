@@ -11,55 +11,71 @@
   <body>
     <header>
       <div id="gameTitleImage">
-        <img src="App_Design/App_Title.png" alt="GAME TITLE" class="no-drag" />
+        <img src="App_Design/App_Title.png" alt="GAME TITLE" />
       </div>
 
       <div class="startGameButtonContainer">
         <a id="startGameButton">
-          <img src="svg/tap_to_start.svg" alt="Start Button" class="no-drag" />
+          <img src="svg/tap_to_start.svg" alt="Start Button" />
         </a>
       </div>
     </header>
 
     <main>
-      <nav id="gameNavigation">
-        <button id="statsButton">STATS</button>
-        <button id="itemButton">ITEM</button>
-        <button id="itemShop">SHOP</button>
-        <button id="settingsButton">SETTINGS</button>
-      </nav>
-
-      <!-- Character selection section -->
-      <h2 id="genderSelect">SELECT GENDER</h2>
-      <div id="characterSelection">
+      <!-- Character GENDER section -->
+      <h2 id="genderSelectText">SELECT GENDER</h2>
+      <div id="genderSelection">
         <!-- Character 1 -->
         <div class="character">
-          <img src="img/sampleProfile.png" alt="Character 1" class="no-drag" />
+          <img src="img/sampleProfile.png" alt="Character 1" />
           <div class="character-info">
             <h3>MALE</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
           </div>
-          <button>SELECT</button>
+          <button id="selectedGenderMale">SELECT</button>
         </div>
 
         <!-- Character 2 -->
         <div class="character">
-          <img src="img/sampleProfile.png" alt="Character 2" class="no-drag" />
+          <img src="img/sampleProfile.png" alt="Character 2" />
           <div class="character-info">
             <h3>FEMALE</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-    
           </div>
+          <button id="selectedGenderFemale">SELECT</button>
+        </div>
+      </div>
+      <!-- END OF Character GENDER Section -->
+
+      <!-- Character Class Section -->
+      <div id="characterClass">
+        <div class="charClass" id="Warrior">
+          <img src="img/sampleProfile.png" alt="Warrior image" />
+          <p>Warrior</p>
+          <button>SELECT</button>
+        </div>
+
+        <div class="charClass" id="Mage">
+          <img src="img/sampleProfile.png" alt="Mage image" />
+          <p>Mage</p>
+          <button>SELECT</button>
+        </div>
+
+        <div class="charClass" id="Assasin">
+          <img src="img/sampleProfile.png" alt="Mage image" />
+          <p>Assasin</p>
+          <button>SELECT</button>
+        </div>
+
+        <div class="charClass" id="Archer">
+          <img src="img/sampleProfile.png" alt="Mage image" />
+          <p>Ranger</p>
           <button>SELECT</button>
         </div>
       </div>
-
-
-
-
     </main>
-    <script src="start.js"></script>
+    <script src="gameSetup.js"></script>
   </body>
 </html>
