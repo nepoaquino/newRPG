@@ -26,7 +26,7 @@ startBtn.addEventListener("click", () => {
 
 // When you click the male or female button
 maleBtn.addEventListener("click", () => {
-  hide(genderText);
+  genderText.innerHTML="Select Role";
   hide(genderSection);
   show(classSection, "grid");
 });
