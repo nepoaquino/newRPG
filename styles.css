@@ -12,6 +12,7 @@
   }
 }
 
+/* Global Styles */
 *,
 *::before,
 *::after {
@@ -47,9 +48,8 @@ img {
   pointer-events: none;
 }
 
-/* Header Styles */
 header {
-  display: block;
+  display: block; /* TOGGLE NONE or BLOCK */
 }
 
 #gameTitleImage {
@@ -90,39 +90,21 @@ header {
   transform: scale(1.1);
 }
 
-/* Game Navigation Styles */
-#gameNavigation {
-  display: none;
-  justify-content: space-between;
-}
-
-#gameNavigation button {
-  font-size: 1.1em;
-  background-color: #dac588;
-  border: 1vmin solid #d6ac6d;
-  border-radius: 5%;
-  color: #333;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  font-family: cursive;
-  box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-h2 {
+/* Character GENDER section  */
+#genderSelectText {
   display: none;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: transparent;
   background-size: 350% 100%;
   animation: color-change 5s ease infinite;
-  background-image: radial-gradient(circle, #ffcb6a, #000000, #000000);
+  background-image: radial-gradient(circle, #ffcb6a, #221600, #362300);
   background-clip: text;
   -webkit-background-clip: text;
+  margin: 20px 0px; /* Add a top margin to position it at the top */
 }
 
-/* Character Selection Section */
-#characterSelection {
+#genderSelection {
   display: none;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,7 +117,6 @@ h2 {
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 10px;
   width: calc(50% - 20px);
   max-width: 300px;
@@ -143,7 +124,7 @@ h2 {
 
 .character img {
   max-width: 100%;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .character-info {
@@ -162,7 +143,7 @@ h2 {
 }
 
 .character button {
-  width: 100%; /* Button width takes up 100% of the parent container */
+  width: 100%;
   margin-top: 20px;
   padding: 10px 0;
   font-size: 1.2em;
@@ -178,26 +159,64 @@ h2 {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.character button:hover , .character button:active{
-  background-color: #fff; 
-  transform: scale(1.05); 
-}
-
-
-/* #gameNavigation button {
-  margin-top: 10px;
-  background-color: #eebd74;
-  border: 1px solid #d6ac6d;
-  border-radius: 5px;
-  color: #333;
-  font-size: 1em;
-  padding: 5px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#gameNavigation button:hover {
-  background-color: #dac588;
+.character button:hover,
+.character button:active {
+  background-color: #fff;
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-} */
+}
+
+/* Character Class Section */
+
+#characterClass {
+  display: none; /* TOGGLE NONE or GRID */
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 450px;
+}
+
+.charClass {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.charClass p {
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.charClass img {
+  max-width: 75%;
+  border-radius: 10%;
+  display: block;
+  margin: 0 auto;
+}
+
+.charClass button {
+  width: 75%;
+  margin-top: 20px;
+  padding: 10px 0;
+  font-size: 1em;
+  border-radius: 5px;
+  font-weight: 700;
+  border: none;
+  background-color: #ddd;
+  color: #111;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.charClass button:hover,
+.charClass button:active {
+  background-color: #fff;
+  transform: scale(1.05);
+}
