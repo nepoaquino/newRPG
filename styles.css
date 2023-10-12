@@ -94,6 +94,7 @@ header {
 #genderSelectText {
   display: none;
   text-align: center;
+  text-transform: uppercase;
   font-size: 2.2em;
   color: transparent;
   background-size: 350% 100%;
@@ -174,7 +175,6 @@ header {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  height: 100vh;
   max-width: 450px;
 }
 
