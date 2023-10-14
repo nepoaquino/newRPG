@@ -6,6 +6,10 @@ const genderText = document.getElementById("genderSelectText");
 const maleBtn = document.getElementById("selectedGenderMale");
 const femaleBtn = document.getElementById("selectedGenderFemale");
 const classSection = document.getElementById("characterClass");
+const warrior = document.getElementById("warriorImage");
+const mage = document.getElementById("mageImage");
+const assasin = document.getElementById("assasinImage");
+const archer = document.getElementById("archerImage");
 
 // Function to hide something
 function hide(element) {
@@ -29,10 +33,19 @@ maleBtn.addEventListener("click", () => {
   genderText.innerHTML="Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
+  warrior.src="character/male/Warrior.jpg";
+  mage.src="character/male/Mage.jpg";
+  assasin.src="character/male/Assasin.jpg";
+  archer.src="character/male/Archer.jpg";
+ 
 });
 
 femaleBtn.addEventListener("click", () => {
   genderText.innerHTML="Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
+  warrior.src="character/female/Warrior.jpg";
+  mage.src="character/female/Mage.jpg";
+  assasin.src="character/female/Assasin.jpg";
+  archer.src="character/female/Archer.jpg";
 });
