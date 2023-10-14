@@ -49,3 +49,16 @@ femaleBtn.addEventListener("click", () => {
   assasin.src="character/female/Assasin.jpg";
   archer.src="character/female/Archer.jpg";
 });
+
+
+
+// Expandable text function
+document.addEventListener("DOMContentLoaded", function () {
+  const expandableText = document.querySelectorAll(".expandable-text");
+
+  expandableText.forEach((text) => {
+    text.addEventListener("click", function () {
+      this.classList.toggle("expanded");
+    });
+  });
+});
