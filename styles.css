@@ -27,7 +27,7 @@
 
 html,
 body {
-  color: white;
+  color: wheat;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -36,8 +36,10 @@ body {
 
 /* Body Styles */
 body {
+  font-family: 'Times New Roman', 'Lucida Calligraphy', cursive;
   background-image: url("img/art04.jpg");
-  background-size: 100% 100%;
+ 
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
@@ -75,7 +77,7 @@ header {
 #startGameButton {
   display: block;
   cursor: pointer;
-  width: 40vmin;
+  width: 50vmin;
   height: auto;
   transition: transform 0.2s;
 }
@@ -97,9 +99,9 @@ header {
   text-transform: uppercase;
   font-size: 2.2em;
   color: transparent;
-  background-size: 350% 100%;
+  background-size: 200% 100%;
   animation: color-change 5s ease infinite;
-  background-image: radial-gradient(circle, #ffcb6a, #221600, #362300);
+  background-image: radial-gradient(circle, #ffcf76, #241701, #7e5304);
   background-clip: text;
   -webkit-background-clip: text;
   margin: 20px 0px; /* Add a top margin to position it at the top */
@@ -135,6 +137,7 @@ header {
 .character-info h3 {
   font-size: 1.5em;
   font-weight: 900;
+  text-transform: capitalize;
 }
 
 .character-info p {
@@ -188,7 +191,7 @@ header {
 
 .charClass p {
   font-size: 1.2em;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
