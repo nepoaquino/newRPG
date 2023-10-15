@@ -33,10 +33,10 @@ maleBtn.addEventListener("click", () => {
   genderText.innerHTML="Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
-  warrior.src="character/male/Warrior.jpg";
-  mage.src="character/male/Mage.jpg";
-  assasin.src="character/male/Assasin.jpg";
-  archer.src="character/male/Archer.jpg";
+  warrior.src="character/male/Warrior.png";
+  mage.src="character/male/Mage.png";
+  assasin.src="character/male/Assasin.png";
+  archer.src="character/male/Archer.png";
  
 });
 
@@ -44,10 +44,10 @@ femaleBtn.addEventListener("click", () => {
   genderText.innerHTML="Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
-  warrior.src="character/female/Warrior.jpg";
-  mage.src="character/female/Mage.jpg";
-  assasin.src="character/female/Assasin.jpg";
-  archer.src="character/female/Archer.jpg";
+  warrior.src="character/female/Warrior.png";
+  mage.src="character/female/Mage.png";
+  assasin.src="character/female/Assasin.png";
+  archer.src="character/female/Archer.png";
 });
 
 
