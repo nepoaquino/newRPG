@@ -1,0 +1,44 @@
+#mainMenuContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2px 2px 0 0;
+  display: none; /*FLEX or NONE*/
+  flex-direction: column;
+  align-items: end;
+}
+
+#hamburgerButton {
+  background-color: #222222f0;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1em 1em 0 1em;
+  font-size: 4vmin;
+}
+
+.menu {
+  display: none;
+  background-color: #333333f0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.menu button {
+  font-size: 4vmin;
+  display: block;
+  width: 100%;
+  padding: 30px 15px;
+  background-color: #333333f0;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#hamburgerButton[aria-expanded="true"] + .menu,
+.hamburger[aria-expanded="true"] + .menu {
+  display: block;
+}
