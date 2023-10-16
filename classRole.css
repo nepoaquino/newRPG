@@ -25,16 +25,16 @@
 }
 
 .charClass img {
-  width: 70%;
+  width: 60%;
   display: block;
   margin: 20px auto 0 auto;
 }
 
 .charClass button {
   width: 75%;
-  padding: 10px 0;
-  margin-bottom: 20px;
-  font-size: 1em;
+  padding: 10px 0 20px 0;
+
+  font-size: 1.2em;
   font-weight: 800;
   border: none;
   background-color: transparent;
@@ -48,4 +48,23 @@
 .charClass button:hover,
 .charClass button:active {
   transform: scale(1.1);
+}
+
+/*FOR LAPTOP and PC */
+@media only screen and (min-width: 1000px) {
+  #characterClass {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+  }
+}
+
+/* FOR MOBILE PHONES*/
+@media only screen and (max-width: 500px) {
+  .charClass p {
+    font-size: 1.2em;
+  }
+
+  .charClass button {
+    font-size: 0.8em;
+  }
 }
