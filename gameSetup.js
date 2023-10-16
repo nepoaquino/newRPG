@@ -1,6 +1,6 @@
 // Get the start button and different sections
-const startBtn = document.getElementById("startGameButton");
 const header = document.querySelector("header");
+const startBtn = document.getElementById("startGameButton");
 const genderSection = document.getElementById("genderSelection");
 const genderText = document.getElementById("genderSelectText");
 const maleBtn = document.getElementById("selectedGenderMale");
@@ -10,8 +10,8 @@ const warrior = document.getElementById("warriorImage");
 const mage = document.getElementById("mageImage");
 const assasin = document.getElementById("assasinImage");
 const archer = document.getElementById("archerImage");
-const hamburgerButton = document.getElementById("hamburgerButton");
-const selectRoleButtons = document.getElementsByClassName("selectRoleButton");
+const selectRoleButtons = document.querySelectorAll(".selectRoleButton");
+const mainMenuContainer = document.getElementById("mainMenuContainer");
 
 // Function to hide something
 function hide(element) {
@@ -52,6 +52,14 @@ femaleBtn.addEventListener("click", () => {
   archer.src = "character/female/Archer.png";
 });
 
+selectRoleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    show(mainMenuContainer, "flex");
+    hide(classSection);
+    hide(genderText);
+  });
+});
+
 // Expandable text function
 document.addEventListener("DOMContentLoaded", function () {
   const expandableText = document.querySelectorAll(".expandable-text");
@@ -63,26 +71,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Hamburger MENU
-hamburgerButton.addEventListener("click", function (event) {
-  const menu = document.getElementById("menu");
-  const expanded = this.classList.toggle("active");
+// MAIN MENU NAVIGATION
+document
+  .getElementById("hamburgerButton")
+  .addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    const expanded = this.getAttribute("aria-expanded") === "true";
 
-  if (expanded) {
-    this.textContent = "✕"; // Use a close symbol (✕) when the menu is active
-  } else {
-    this.textContent = "☰"; // Revert to the hamburger icon (☰) when the menu is closed
-  }
-
-  menu.classList.toggle("active");
-  event.stopPropagation(); // Prevent the click event from propagating to the document.
-});
-
-// Convert HTMLCollection to an array and loop through each button
-Array.from(selectRoleButtons).forEach((button) => {
-  button.addEventListener("click", () => {
-    show(hamburgerButton);
-    hide(classSection); // Now classSection is defined and can be accessed
-    hide(genderText); // Now genderText is defined and can be accessed
+    if (expanded) {
+      menu.style.display = "none";
+      this.setAttribute("aria-expanded", "false");
+    } else {
+      menu.style.display = "block";
+      this.setAttribute("aria-expanded", "true");
+    }
   });
-});
