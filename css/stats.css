@@ -1,0 +1,62 @@
+#statsOverview {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f5f5f5;
+  border: 2px solid #333;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#statsView ul {
+  list-style: none;
+  padding: 0;
+}
+
+#statsView li {
+  margin: 5px 0;
+}
+
+#statModifiers ul {
+  list-style: none;
+  padding: 0;
+}
+
+#statModifiers li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+#statModifiers .buttons button {
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#statModifiers .buttons button:hover {
+  background-color: #45a049;
+}
+
+#statsConfirm,
+#statsCancel {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+}
+
+#statsConfirm:hover,
+#statsCancel:hover {
+  background-color: #45a049;
+}
