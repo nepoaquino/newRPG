@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>RPG GAME</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="gender.css" />
+    <link rel="stylesheet" href="classRole.css" />
+    <link rel="stylesheet" href="gameMenu.css" />
   </head>
 
   <body>
@@ -26,7 +29,7 @@
       <h2 id="genderSelectText">SELECT CHARACTER</h2>
 
       <div id="genderSelection">
-        <!-- Character 1 -->
+        <!-- Male Character-->
         <div class="characterBGimage">
           <div class="character">
             <img src="character/male/Character.png" alt="Character 1" />
@@ -52,7 +55,7 @@
           </div>
         </div>
 
-        <!-- Character 2 -->
+        <!-- Female Character -->
         <div class="characterBGimage">
           <div class="character">
             <img src="character/female/Character.png" alt="Character 2" />
@@ -89,7 +92,7 @@
               alt="lineBorder"
             />
           </div>
-          <button>SELECT</button>
+          <button class="selectRoleButton">SELECT</button>
         </div>
 
         <div class="charClass" id="Mage">
@@ -101,7 +104,7 @@
               alt="lineBorder"
             />
           </div>
-          <button>SELECT</button>
+          <button class="selectRoleButton">SELECT</button>
         </div>
 
         <div class="charClass" id="Assasin">
@@ -113,7 +116,7 @@
               alt="lineBorder"
             />
           </div>
-          <button>SELECT</button>
+          <button class="selectRoleButton">SELECT</button>
         </div>
 
         <div class="charClass" id="Archer">
@@ -125,8 +128,19 @@
               alt="lineBorder"
             />
           </div>
-          <button>SELECT</button>
+          <button class="selectRoleButton">SELECT</button>
         </div>
+      </div>
+
+      <button id="hamburgerButton" class="hamburger" aria-expanded="false">
+        ☰
+      </button>
+      <div id="menu" class="menu">
+        <button id="statsButton">Character Stats</button>
+        <button id="itemShop">Skills</button>
+        <button id="itemShop">Equipment</button>
+        <button id="itemButton">Inventory</button>
+        <button id="settingsButton">Settings</button>
       </div>
     </main>
     <script src="gameSetup.js"></script>
