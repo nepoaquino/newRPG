@@ -10,6 +10,8 @@ const warrior = document.getElementById("warriorImage");
 const mage = document.getElementById("mageImage");
 const assasin = document.getElementById("assasinImage");
 const archer = document.getElementById("archerImage");
+const hamburgerButton = document.getElementById("hamburgerButton");
+const selectRoleButtons = document.getElementsByClassName("selectRoleButton");
 
 // Function to hide something
 function hide(element) {
@@ -30,35 +32,54 @@ startBtn.addEventListener("click", () => {
 
 // When you click the male or female button
 maleBtn.addEventListener("click", () => {
-  genderText.innerHTML="Select Role";
+  genderText.innerHTML = "Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
-  warrior.src="character/male/Warrior.png";
-  mage.src="character/male/Mage.png";
-  assasin.src="character/male/Assasin.png";
-  archer.src="character/male/Archer.png";
- 
+  warrior.src = "character/male/Warrior.png";
+  mage.src = "character/male/Mage.png";
+  assasin.src = "character/male/Assasin.png";
+  archer.src = "character/male/Archer.png";
 });
 
 femaleBtn.addEventListener("click", () => {
-  genderText.innerHTML="Select Role";
+  genderText.innerHTML = "Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
-  warrior.src="character/female/Warrior.png";
-  mage.src="character/female/Mage.png";
-  assasin.src="character/female/Assasin.png";
-  archer.src="character/female/Archer.png";
+  warrior.src = "character/female/Warrior.png";
+  mage.src = "character/female/Mage.png";
+  assasin.src = "character/female/Assasin.png";
+  archer.src = "character/female/Archer.png";
 });
 
+// Hamburger MENU
+document
+  .getElementById("hamburgerButton")
+  .addEventListener("click", function (event) {
+    const menu = document.getElementById("menu");
+    const expanded = this.classList.toggle("active");
+
+    if (expanded) {
+      this.textContent = "✕"; // Use a close symbol (✕) when the menu is active
+    } else {
+      this.textContent = "☰"; // Revert to the hamburger icon (☰) when the menu is closed
+    }
+
+    menu.classList.toggle("active");
+    event.stopPropagation(); // Prevent the click event from propagating to the document.
+  });
+
+// Prevent clicks inside the menu from closing the menu.
+// document.getElementById("menu").addEventListener("click", function (event) {
+//   event.stopPropagation();
+// });
 
 
-// Expandable text function
-document.addEventListener("DOMContentLoaded", function () {
-  const expandableText = document.querySelectorAll(".expandable-text");
 
-  expandableText.forEach((text) => {
-    text.addEventListener("click", function () {
-      this.classList.toggle("expanded");
-    });
+// Convert HTMLCollection to an array and loop through each button
+Array.from(selectRoleButtons).forEach((button) => {
+  button.addEventListener("click", () => {
+    show(hamburgerButton);
+    hide(classSection); // Now classSection is defined and can be accessed
+    hide(genderText); // Now genderText is defined and can be accessed
   });
 });
