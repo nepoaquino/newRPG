@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="gender.css" />
     <link rel="stylesheet" href="classRole.css" />
-    <link rel="stylesheet" href="gameMenu.css" />
+    <link rel="stylesheet" href="mainMenu.css" />
   </head>
 
   <body>
@@ -132,15 +132,19 @@
         </div>
       </div>
 
-      <button id="hamburgerButton" class="hamburger" aria-expanded="false">
-        ☰
-      </button>
-      <div id="menu" class="menu">
-        <button id="statsButton">Character Stats</button>
-        <button id="itemShop">Skills</button>
-        <button id="itemShop">Equipment</button>
-        <button id="itemButton">Inventory</button>
-        <button id="settingsButton">Settings</button>
+      <!-- Main Menu Section -->
+      <div id="mainMenuContainer">
+        <button id="hamburgerButton" class="hamburger" aria-expanded="false">
+          MAIN MENU
+        </button>
+
+        <div id="menu" class="menu">
+          <button id="statsButton">Attributes</button>
+          <button id="itemShop">Skills</button>
+          <button id="equipment">Equipment</button>
+          <button id="itemButton">Inventory</button>
+          <button id="settingsButton">Settings</button>
+        </div>
       </div>
     </main>
     <script src="gameSetup.js"></script>
