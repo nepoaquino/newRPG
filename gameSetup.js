@@ -30,7 +30,7 @@ startBtn.addEventListener("click", () => {
   show(genderSection, "flex"); // show as Flex
 });
 
-// When you click the male or female button
+// When you click the male
 maleBtn.addEventListener("click", () => {
   genderText.innerHTML = "Select Role";
   hide(genderSection);
@@ -41,6 +41,7 @@ maleBtn.addEventListener("click", () => {
   archer.src = "character/male/Archer.png";
 });
 
+// When you click the female
 femaleBtn.addEventListener("click", () => {
   genderText.innerHTML = "Select Role";
   hide(genderSection);
@@ -51,29 +52,31 @@ femaleBtn.addEventListener("click", () => {
   archer.src = "character/female/Archer.png";
 });
 
-// Hamburger MENU
-document
-  .getElementById("hamburgerButton")
-  .addEventListener("click", function (event) {
-    const menu = document.getElementById("menu");
-    const expanded = this.classList.toggle("active");
+// Expandable text function
+document.addEventListener("DOMContentLoaded", function () {
+  const expandableText = document.querySelectorAll(".expandable-text");
 
-    if (expanded) {
-      this.textContent = "✕"; // Use a close symbol (✕) when the menu is active
-    } else {
-      this.textContent = "☰"; // Revert to the hamburger icon (☰) when the menu is closed
-    }
-
-    menu.classList.toggle("active");
-    event.stopPropagation(); // Prevent the click event from propagating to the document.
+  expandableText.forEach((text) => {
+    text.addEventListener("click", function () {
+      this.classList.toggle("expanded");
+    });
   });
+});
 
-// Prevent clicks inside the menu from closing the menu.
-// document.getElementById("menu").addEventListener("click", function (event) {
-//   event.stopPropagation();
-// });
+// Hamburger MENU
+hamburgerButton.addEventListener("click", function (event) {
+  const menu = document.getElementById("menu");
+  const expanded = this.classList.toggle("active");
 
+  if (expanded) {
+    this.textContent = "✕"; // Use a close symbol (✕) when the menu is active
+  } else {
+    this.textContent = "☰"; // Revert to the hamburger icon (☰) when the menu is closed
+  }
 
+  menu.classList.toggle("active");
+  event.stopPropagation(); // Prevent the click event from propagating to the document.
+});
 
 // Convert HTMLCollection to an array and loop through each button
 Array.from(selectRoleButtons).forEach((button) => {
