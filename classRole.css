@@ -1,0 +1,51 @@
+/* Character Class Section */
+#characterClass {
+  display: none; /* TOGGLE NONE or GRID */
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+  height: 100%;
+}
+
+.charClass {
+  text-align: center;
+  background-image: url("App_Design/Select_Gender/App_design_Gender_Paper_BG.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.charClass p {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.charClass img {
+  width: 70%;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.charClass button {
+  width: 75%;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: 800;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.charClass button:hover,
+.charClass button:active {
+  transform: scale(1.1);
+}
