@@ -15,8 +15,8 @@ let stats = {
   int: 0,
   vit: 0,
   agi: 0,
-  currentHP: 100,
-  currentMP: 100,
+  currentHP: 80,
+  currentMP: 80,
   permanentHP: 100,
   permanentMP: 100,
   currentExperience: 0,
@@ -38,17 +38,15 @@ let stats = {
 // Permanently allocated stats object
 let permanentlyAllocatedStats = { ...stats };
 
-
-
 // Function to update the stats view with current allocations
 function updateStatsView() {
   // Extract stats for easier usage
   const { vit, int, str, agi } = stats;
 
   // Apply bonuses for VIT and INT
-  stats.currentHP = 100 + vit;
+  stats.currentHP =  80 + vit;
   stats.permanentHP = 100 + vit;
-  stats.currentMP = 100 + int;
+  stats.currentMP = 80 + int;
   stats.permanentMP = 100 + int;
 
   // Calculate the bonuses for each allocated stat
@@ -56,7 +54,7 @@ function updateStatsView() {
   stats.physicalDef = str + vit;
   stats.magicDmg = int;
   stats.magicDef = vit + int;
-  stats.critRate = ( 0.1 * 0.1).toFixed(1); // Round to 1 decimal place
+  stats.critRate = (0.1 * 0.1).toFixed(1); // Round to 1 decimal place
   stats.critDmg = 100 + int * 2;
   stats.hitRate = agi;
   stats.blockRate = str + vit;
@@ -68,8 +66,8 @@ function updateStatsView() {
   document.querySelector("#intValue").textContent = int;
   document.querySelector("#vitValue").textContent = vit;
   document.querySelector("#agiValue").textContent = agi;
-  document.querySelector("#currentHP").textContent = `${stats.currentHP} /`;
-  document.querySelector("#currentMP").textContent = `${stats.currentMP} /`;
+  document.querySelector("#currentHP").textContent = `${stats.currentHP}/`;
+  document.querySelector("#currentMP").textContent = `${stats.currentMP}/`;
   document.querySelector("#permanentHP").textContent = stats.permanentHP;
   document.querySelector("#permanentMP").textContent = stats.permanentMP;
   document.querySelector("#physicalDmg").textContent = stats.physicalDmg;
@@ -82,8 +80,6 @@ function updateStatsView() {
   document.querySelector("#critRate").textContent = `${stats.critRate}%`;
   document.querySelector("#resistance").textContent = stats.resistance;
   document.querySelector("#critDmg").textContent = `${stats.critDmg}%`;
-
-
 }
 
 // Function to handle stat modifications
@@ -95,7 +91,10 @@ function handleStatModification(event) {
     if (event.target.classList.contains("plusButton") && availablePoints > 0) {
       stats[stat]++; // Increment the stat value
       availablePoints--; // Decrease available points
-    } else if (event.target.classList.contains("minusButton") && stats[stat] > permanentlyAllocatedStats[stat]) {
+    } else if (
+      event.target.classList.contains("minusButton") &&
+      stats[stat] > permanentlyAllocatedStats[stat]
+    ) {
       stats[stat]--; // Decrement the stat value
       availablePoints++; // Increase available points
     }
@@ -140,7 +139,6 @@ statsButton.addEventListener("click", toggleStats);
 
 // Event listener for the statsConfirmButton click
 statsConfirmButton.addEventListener("click", saveStatsAndToggle);
-
 
 // Event listener for the "CANCEL" button
 const statsCancelButton = document.querySelector("#statsCancel");
