@@ -161,24 +161,22 @@
           <ul>
             <li>
               Health:
-              <span id="currentHP"></span>
-              <span id="permanentHP"></span>
+              <span id="currentHP">100</span><span id="permanentHP">100</span>
             </li>
-            <li>Physical-Dmg:<span id="physicalDmg"></span></li>
+            <li>Physical-Dmg:<span id="physicalDmg">0</span></li>
             <li>
               Mana:
-              <span id="currentMP"></span>
-              <span id="permanentMP"></span>
+              <span id="currentMP">100</span><span id="permanentMP">100</span>
             </li>
-            <li>Magic-Dmg:<span id="magicDmg"></span></li>
-            <li>Hit-Rate:<span id="hitRate"></span></li>
-            <li>Physical-Def:<span id="physicalDef"></span></li>
-            <li>Evasion:<span id="evasion"></span></li>
-            <li>Magic-Def:<span id="magicDef"></span></li>
-            <li>Block-Rate:<span id="blockRate"></span></li>
-            <li>Crit-Rate:<span id="critRate"></span></li>
-            <li>Resistance:<span id="resistance"></span></li>
-            <li>Crit-Dmg:<span id="critDmg"></span></li>
+            <li>Magic-Dmg:<span id="magicDmg">0</span></li>
+            <li>Hit-Rate:<span id="hitRate">0</span></li>
+            <li>Physical-Def:<span id="physicalDef">0</span></li>
+            <li>Evasion:<span id="evasion">0</span></li>
+            <li>Magic-Def:<span id="magicDef">0</span></li>
+            <li>Block-Rate:<span id="blockRate">0</span></li>
+            <li>Crit-Rate:<span id="critRate">0</span></li>
+            <li>Resistance:<span id="resistance">0</span></li>
+            <li>Crit-Dmg:<span id="critDmg">0</span></li>
           </ul>
         </div>
 
@@ -186,14 +184,14 @@
         <div id="statModifiers">
           <ul>
             <li>
-              STR :<span id="strValue"></span>
+              STR:<span id="strValue">0</span>
               <div class="buttons">
                 <button class="plusButton" data-stat="str">+</button>
                 <button class="minusButton" data-stat="str">-</button>
               </div>
             </li>
             <li>
-              AGI :<span id="agiValue"></span>
+              AGI:<span id="agiValue">0</span>
               <div class="buttons">
                 <button class="plusButton" data-stat="agi">+</button>
                 <button class="minusButton" data-stat="agi">-</button>
@@ -201,16 +199,15 @@
             </li>
 
             <li>
-              INT :<span id="intValue"></span>
+              INT:<span id="intValue">0</span>
               <div class="buttons">
                 <button class="plusButton" data-stat="int">+</button>
                 <button class="minusButton" data-stat="int">-</button>
               </div>
             </li>
-          </ul>
-          <ul>
+
             <li>
-              VIT :<span id="vitValue"></span>
+              VIT:<span id="vitValue">0</span>
               <div class="buttons">
                 <button class="plusButton" data-stat="vit">+</button>
                 <button class="minusButton" data-stat="vit">-</button>
@@ -218,13 +215,14 @@
             </li>
           </ul>
         </div>
-        <p id="availablePoints">
+        <p id="availablePointsText">
           Available Points: <span id="availablePointsValue">10</span>
         </p>
         <button id="statsConfirm">CONFIRM</button>
         <button id="statsCancel">CANCEL</button>
       </div>
     </main>
+
     <script src="javascript/gameSetup.js"></script>
     <script src="javascript/stats.js"></script>
   </body>
