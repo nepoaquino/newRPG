@@ -37,7 +37,7 @@ body {
 body {
   font-family: "Courier New", Courier, monospace;
   background-image: url("../background_img/main.jpg");
-  background-position: center center;
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
