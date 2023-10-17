@@ -1,7 +1,7 @@
 #statsOverview {
   display: none; /*NONE OR BLOCK */
   position: absolute;
-  top: 50%;
+  top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #333333f0;
@@ -92,31 +92,27 @@
 
 @media only screen and (max-width: 768px) {
   #statsOverview {
-    padding: 0 5px 10px 5px;
+    padding: 0 5px 5px 5px;
   }
 
   #statsOverview h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
   #statsView ul {
-    font-size: 0.9em;
+    font-size: 1em;
     gap: 10px;
   }
 
   /* <!-- Stat modifiers section --> */
-  #statModifiers ul {
-    padding: 10px 60px;
-  }
 
   #statModifiers li {
-    font-size: 0.9em;
-    padding: 5px 0;
+    font-size: 1em;
   }
 
   #statModifiers .buttons button {
     font-size: 1em;
-    padding: 5px 15px;
+    
   }
 
   #availablePointsText {
@@ -124,9 +120,7 @@
   }
   #statsConfirm,
   #statsCancel {
-    font-size: 0.7em;
-    font-weight: bold;
-    padding: 7px 15px;
-    margin: 7px 7px;
+    font-size: 1em;
+ 
   }
 }
