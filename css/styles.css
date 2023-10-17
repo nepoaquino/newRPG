@@ -12,7 +12,6 @@
   }
 }
 
-
 /* Global Styles */
 *,
 *::before,
@@ -38,7 +37,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-image: url("../background_img/main.jpg");
   background-position: right;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 0;
@@ -51,7 +50,7 @@ img {
 }
 
 header {
-  display: block; /* TOGGLE NONE or BLOCK */
+  display: none; /* TOGGLE NONE or BLOCK */
 }
 
 #gameTitleImage {
@@ -89,4 +88,10 @@ header {
 #startGameButton:hover,
 #startGameButton:active {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
 }
