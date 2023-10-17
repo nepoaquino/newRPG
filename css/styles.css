@@ -50,7 +50,7 @@ img {
 }
 
 header {
-  display: none; /* TOGGLE NONE or BLOCK */
+  display: block; /* TOGGLE NONE or BLOCK */
 }
 
 #gameTitleImage {
