@@ -1,62 +1,132 @@
 #statsOverview {
-  display: none;
+  display: none; /*NONE OR BLOCK */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f5f5f5;
-  border: 2px solid #333;
-  padding: 20px;
+  background-color: #333333f0;
+  border: 1px solid #111111f0;
+  padding: 0 20px 20px 20px;
   text-align: center;
-  width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  max-width: 95%;
+  color: #efefefef;
+}
+
+#statsOverview h2 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+#statsView {
+  text-align: center;
 }
 
 #statsView ul {
+  font-size: 1.3em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   list-style: none;
   padding: 0;
+  gap: 20px;
 }
 
-#statsView li {
-  margin: 5px 0;
-}
-
+/* <!-- Stat modifiers section --> */
 #statModifiers ul {
   list-style: none;
-  padding: 0;
+  padding: 10px 50px;
 }
 
 #statModifiers li {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: flex;
   justify-content: space-between;
-  margin: 5px 0;
+  padding: 10px 0;
 }
 
 #statModifiers .buttons button {
-  font-size: 20px;
-  padding: 5px 10px;
-  background-color: #4caf50;
-  color: white;
+  font-size: 1em;
+  padding: 5px 20px;
+  background-color: #666;
+  color: #efefefef;
   border: none;
   cursor: pointer;
 }
 
-#statModifiers .buttons button:hover {
-  background-color: #45a049;
+#statModifiers .buttons button:hover,
+#statModifiers .buttons button:active {
+  background-color: #55c55b;
+  color: #fff;
+}
+
+#availablePointsText {
+  color: #6dfa74;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 #statsConfirm,
 #statsCancel {
-  font-size: 20px;
+  font-size: 1em;
+  font-weight: bold;
   padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
+  background-color: #666;
+  color: #efefefef;
   border: none;
   cursor: pointer;
-  margin: 10px 10px 0 0;
+  margin: 10px 10px;
 }
 
 #statsConfirm:hover,
-#statsCancel:hover {
-  background-color: #45a049;
+#statsCancel:hover,
+#statsConfirm:active,
+#statsCancel:active {
+  background-color: #55c55b;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  #statsOverview {
+    padding: 0 5px 10px 5px;
+  }
+
+  #statsOverview h2 {
+    font-size: 1.4em;
+  }
+
+  #statsView ul {
+    font-size: 0.9em;
+    gap: 10px;
+  }
+
+  /* <!-- Stat modifiers section --> */
+  #statModifiers ul {
+    padding: 10px 60px;
+  }
+
+  #statModifiers li {
+    font-size: 0.9em;
+    padding: 5px 0;
+  }
+
+  #statModifiers .buttons button {
+    font-size: 1em;
+    padding: 5px 15px;
+  }
+
+  #availablePointsText {
+    font-size: 1em;
+  }
+  #statsConfirm,
+  #statsCancel {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 7px 15px;
+    margin: 7px 7px;
+  }
 }
