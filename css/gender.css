@@ -2,14 +2,17 @@
 #genderSelectText {
   display: none;
   text-align: center;
+  font-size: 2rem;
   text-transform: uppercase;
-  font-size: 2.5rem;
   color: transparent;
   background-size: 200% 100%;
-  animation: color-change 5s ease infinite;
+  animation: color-change 4s ease infinite;
   background-image: radial-gradient(circle, #ffcf76, #241701, #7e5304);
   background-clip: text;
   -webkit-background-clip: text;
+  white-space: nowrap;
+  margin: auto 0;
+  padding-top: 10px;
 }
 
 #genderSelection {
@@ -22,55 +25,50 @@
 
 .characterBGimage {
   text-align: center;
-  width: calc(50% - 1px);
+  width: calc(50%);
   max-width: 300px;
   background-image: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  height: auto;
 }
 
 .character img {
-  padding-top: 20px;
-  width: 90%;
+  padding-top: 30px;
+  width: 85%;
   height: auto;
 }
 
 .character-name {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 800;
   text-transform: capitalize;
   padding: 0px 20px;
 }
 
 .characterInformation p {
-  font-size: 1.2em;
-  padding: 0 30px;
+  font-size: 1rem;
+  padding: 0 20px;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
   cursor: pointer;
 }
 
-.characterInformation .expanded {
+/* .characterInformation .expanded {
   white-space: normal;
   text-overflow: clip;
-}
-
-.characterInformation img {
-  width: 75%;
-  border: none;
-}
+} */
 
 .character button {
   position: relative;
   bottom: 0;
   border: none;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 800;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   background-color: transparent;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -79,16 +77,4 @@
 .character button:active {
   transform: scale(1.1);
   color: #333333;
-}
-
-@media only screen and (max-width: 768px) {
-  .characterInformation p {
-    font-size: 0.9em;
-    padding: 0 20px;
-  }
-
-  .character button {
-    
-    font-size: 0.9em;
-  }
 }
