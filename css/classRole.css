@@ -1,43 +1,93 @@
 /* Character Class Section */
 #characterClass {
-  display: none; /* TOGGLE NONE or GRID */
+  display: none;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  max-width: 500px;
-  height: 100%;
+  max-width: 1200px;
 }
 
 .charClass {
   text-align: center;
-  background-image: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png");
+  background: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png")
+    center no-repeat;
+
   background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: auto;
+}
+
+.characterRoleImage {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: 15px;
+}
+
+.charClass img:first-child {
+  width: 100%;
+  height: 100%;
+}
+
+.charClass h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: auto 0;
+  padding: 0;
+  width: 100%;
+  text-transform: uppercase;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: color-change 4s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #241701, #7e5304);
+  background-clip: text;
+  -webkit-background-clip: text;
+  white-space: nowrap;
+}
+
+.charClass .bonusStats {
+  padding-top: 10px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.charClass .stat-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px 10px;
+}
+
+.charClass .stat-cell {
+  flex: 1;
+  margin: -15px 5px;
 }
 
 .charClass p {
-  font-size: 1.5em;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-.charClass img {
-  width: 60%;
+.charClass img:last-child {
   display: block;
-  margin: 20px auto 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .charClass button {
+  padding-bottom: 20px;
+  display: block;
+  margin: 0 auto;
   width: 75%;
-  padding: 10px 0 20px 0;
-
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 800;
   border: none;
-  background-color: transparent;
+  background: transparent;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -50,21 +100,8 @@
   transform: scale(1.1);
 }
 
-/*FOR LAPTOP and PC */
-@media only screen and (min-width: 1000px) {
+@media (min-width: 800px) {
   #characterClass {
     grid-template-columns: repeat(4, 1fr);
-    max-width: 1200px;
-  }
-}
-
-/* FOR MOBILE PHONES*/
-@media only screen and (max-width: 500px) {
-  .charClass p {
-    font-size: 1.2em;
-  }
-
-  .charClass button {
-    font-size: 0.8em;
   }
 }
