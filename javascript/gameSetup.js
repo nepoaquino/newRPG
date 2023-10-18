@@ -61,15 +61,15 @@ selectRoleButtons.forEach((button) => {
 });
 
 // Expandable text function
-document.addEventListener("DOMContentLoaded", function () {
-  const expandableText = document.querySelectorAll(".expandable-text");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const expandableText = document.querySelectorAll(".expandable-text");
 
-  expandableText.forEach((text) => {
-    text.addEventListener("click", function () {
-      this.classList.toggle("expanded");
-    });
-  });
-});
+//   expandableText.forEach((text) => {
+//     text.addEventListener("click", function () {
+//       this.classList.toggle("expanded");
+//     });
+//   });
+// });
 
 // MAIN MENU NAVIGATION
 document
