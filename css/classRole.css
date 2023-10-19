@@ -65,11 +65,13 @@
 
 .charClass .stat-cell {
   flex: 1;
-  margin: -15px 5px;
+  margin: auto;
 }
 
 .charClass p {
+  color: rgb(0, 0, 50);
   font-size: 1rem;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -86,18 +88,12 @@
   width: 75%;
   font-size: 1em;
   font-weight: 800;
-  border: none;
+
   background: transparent;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.charClass button:hover,
-.charClass button:active {
-  transform: scale(1.1);
 }
 
 @media (min-width: 800px) {
