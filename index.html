@@ -139,11 +139,11 @@
           <button class="selectRoleButton">SELECT</button>
         </div>
 
-        <!-- ASSASIN -->
+        <!-- ASSASSIN -->
         <div class="charClass" id="Assasin">
           <div class="characterRoleImage">
-            <img src="" alt="Mage image" id="assasinImage" />
-            <h3>ASSASIN</h3>
+            <img src="" alt="Mage image" id="assassinImage" />
+            <h3>ASSASSIN</h3>
           </div>
 
           <div class="bonusStats">
@@ -189,22 +189,6 @@
             />
           </div>
           <button class="selectRoleButton">SELECT</button>
-        </div>
-      </div>
-
-      <!-- Main Menu Section -->
-      <div id="mainMenuContainer">
-        <button id="hamburgerButton" class="hamburger" aria-expanded="false">
-          MAIN MENU
-        </button>
-
-        <!-- Main Menu Buttons -->
-        <div id="menu" class="menu">
-          <button id="statsButton">Attributes</button>
-          <button id="itemShop">Skills</button>
-          <button id="equipment">Equipment</button>
-          <button id="itemButton">Inventory</button>
-          <button id="settingsButton">Settings</button>
         </div>
       </div>
 
@@ -275,6 +259,41 @@
         </p>
         <button id="statsConfirm">CONFIRM</button>
         <button id="statsCancel">CANCEL</button>
+      </div>
+
+      <div id="mainMenuContainer" class="menu">
+        <button id="statsButton" class="menu-button">Stats</button>
+        <button id="itemShop" class="menu-button">Skills</button>
+        <!-- <button id="equipment" class="menu-button">Equipment</button> -->
+        <button id="itemButton" class="menu-button">Inventory</button>
+        <button id="settingsButton" class="menu-button">Settings</button>
+      </div>
+
+      <div id="gameOverview">
+        <!-- Main Menu Buttons -->
+
+        <div id="characterImageContainer">
+          <img
+            src="character/female/Assassin.png"
+            alt="profilePicture"
+            id="characterProfilePicture"
+          />
+        </div>
+        <div id="characterInfoTextsContainer">
+          <div class="bar">
+            <div class="health"><p class="barLabel">Health: 81%</p></div>
+          </div>
+
+          <div class="bar">
+            <div class="mana"><p class="barLabel">Mana: 65%</p></div>
+          </div>
+
+          <div class="bar">
+            <div class="experience"><p class="barLabel">Exp: 70%</p></div>
+          </div>
+        </div>
+
+        <div id="gameMenuButtons"></div>
       </div>
     </main>
 
