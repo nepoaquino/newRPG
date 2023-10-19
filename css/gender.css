@@ -7,7 +7,12 @@
   color: transparent;
   background-size: 500% 100%;
   animation: color-change 5s ease infinite;
-  background-image: repeating-radial-gradient(circle, #ffcf76, #241701, #7e5304);
+  background-image: repeating-radial-gradient(
+    circle,
+    #ffcf76,
+    #241701,
+    #7e5304
+  );
   background-clip: text;
   -webkit-background-clip: text;
   margin: auto 0;
@@ -21,7 +26,6 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-
 }
 
 .characterBGimage {
@@ -34,48 +38,45 @@
   background-repeat: no-repeat;
   height: auto;
   padding-bottom: 30px;
-
 }
-
 
 .character img {
   padding-top: 15px;
   max-width: 85%;
   height: auto;
-
 }
 
 .character-name {
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: capitalize;
-  padding: 5px 20px;
+  padding: 5px auto;
   color: transparent;
   background-size: 200% 100%;
   animation: color-change 3s ease infinite;
-  background-image: repeating-radial-gradient(circle, #ffcf76, #241701, #7e5304);
+  background-image: repeating-radial-gradient(
+    circle,
+    #ffcf76,
+    #241701,
+    #7e5304
+  );
   background-clip: text;
   -webkit-background-clip: text;
-
 }
 
-.characterInformation{
-margin: 0 auto;
-  width: 85%;
-  height: 120px;
-  max-height: 100%;
-
-  
+.characterInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  padding: 0 25px;
 }
 
 .characterInformation p {
   font-size: 1.1rem;
-  text-align:center;
-  /* overflow-y: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  cursor: pointer; */
-
+  text-align: center;
 }
 
 /* .characterInformation .expanded {
@@ -83,14 +84,13 @@ margin: 0 auto;
   text-overflow: clip;
 } */
 
-.characterGenderButton{
-margin: auto;
+.characterGenderButton {
+  margin: auto;
 }
 
-.characterGenderButton button{
+.characterGenderButton button {
   width: 80%;
   font-size: 1.1rem;
   font-weight: 800;
   background-color: transparent;
-
 }
