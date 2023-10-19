@@ -5,13 +5,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #333333f0;
+  color: #efefefef;
   border: 1px solid #111111f0;
   padding: 0 20px 20px 20px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 500px;
   max-width: 95%;
-  color: #efefefef;
 }
 
 #statsOverview h2 {
@@ -89,37 +89,3 @@
   background-color: #55c55b;
   color: #fff;
 }
-
-/* @media only screen and (max-width: 768px) {
-  #statsOverview {
-    padding: 0 5px 5px 5px;
-  }
-
-  #statsOverview h2 {
-    font-size: 1.5em;
-  }
-
-  #statsView ul {
-    font-size: 1em;
-    gap: 10px;
-  }
-
-
-  #statModifiers li {
-    font-size: 1em;
-  }
-
-  #statModifiers .buttons button {
-    font-size: 1em;
-    
-  }
-
-  #availablePointsText {
-    font-size: 1em;
-  }
-  #statsConfirm,
-  #statsCancel {
-    font-size: 1em;
- 
-  }
-} */
