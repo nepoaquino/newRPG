@@ -13,8 +13,9 @@
     #241701,
     #7e5304
   );
-  background-clip: text;
+
   -webkit-background-clip: text;
+  background-clip: text;
   margin: auto 0;
   padding-top: 10px;
   width: 100%;
@@ -60,8 +61,8 @@
     #241701,
     #7e5304
   );
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
 
   display: flex;
   flex-direction: column;
