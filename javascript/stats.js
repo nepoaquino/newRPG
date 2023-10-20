@@ -7,7 +7,7 @@ const availablePointsElement = document.querySelector("#availablePointsValue");
 // Rest of your code remains the same.
 
 // Initial available points
-let availablePoints = 10;
+let availablePoints = 100;
 
 // Character stats
 let stats = {
@@ -44,7 +44,7 @@ function updateStatsView() {
   const { vit, int, str, agi } = stats;
 
   // Apply bonuses for VIT and INT
-  stats.currentHP =  80 + vit;
+  stats.currentHP = 80 + vit;
   stats.permanentHP = 100 + vit;
   stats.currentMP = 80 + int;
   stats.permanentMP = 100 + int;
