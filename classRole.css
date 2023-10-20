@@ -1,0 +1,105 @@
+/* Character Class Section */
+#characterClass {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.charClass {
+  text-align: center;
+  background: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png")
+    center no-repeat;
+
+  background-size: 100% 100%;
+  height: auto;
+}
+
+.characterRoleImage {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  position: relative;
+  top: 15px;
+}
+
+.charClass img:first-child {
+  width: 100%;
+  height: 100%;
+}
+
+.charClass h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: auto 0;
+  padding: 0;
+  width: 100%;
+  text-transform: uppercase;
+  color: transparent;
+  background-size: 300% 100%;
+  animation: color-change 5s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+
+  margin-bottom: 5px;
+}
+
+.charClass .bonusStats {
+  padding-top: 10px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.charClass .stat-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px 10px;
+}
+
+.charClass .stat-cell {
+  flex: 1;
+  margin: auto;
+}
+
+.charClass p {
+  color: rgb(0, 0, 50);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.charClass img:last-child {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.charClass button {
+  padding-bottom: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  font-size: 1em;
+  font-weight: 800;
+
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  #characterClass {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
