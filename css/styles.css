@@ -97,14 +97,11 @@ header {
 }
 
 button {
-  transition: background-color 0.5s, transform 0.5s;
+  transition: background-color 0.6s, transform 0.6s;
   border: none;
-}
-
-button:hover,
-button:active {
-  transform: scale(1.1);
-  color: #333333;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #111111;
 }
 
 @media only screen and (max-width: 768px) {

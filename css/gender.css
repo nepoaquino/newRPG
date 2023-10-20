@@ -3,22 +3,18 @@
   display: none;
   text-align: center;
   font-size: 2.5rem;
+  margin: auto 0;
+  width: 100%;
+  padding-top: 10px;
+
   text-transform: uppercase;
   color: transparent;
-  background-size: 500% 100%;
-  animation: color-change 5s ease infinite;
-  background-image: repeating-radial-gradient(
-    circle,
-    #ffcf76,
-    #241701,
-    #7e5304
-  );
+  background-size: 300% 100%;
+  animation: color-change 10s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
 
   -webkit-background-clip: text;
   background-clip: text;
-  margin: auto 0;
-  padding-top: 10px;
-  width: 100%;
 }
 
 #genderSelection {
@@ -38,12 +34,11 @@
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  padding-bottom: 30px;
+  padding: 15px 15px 25px 15px;
 }
 
 .character img {
-  padding-top: 15px;
-  max-width: 85%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -51,27 +46,17 @@
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: capitalize;
-  padding: 5px auto;
+  padding: 5px 0;
   color: transparent;
-  background-size: 200% 100%;
-  animation: color-change 3s ease infinite;
-  background-image: repeating-radial-gradient(
-    circle,
-    #ffcf76,
-    #241701,
-    #7e5304
-  );
+  background-size: 300% 100%;
+  animation: color-change 5s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.character-name h3 {
-  width: 80%;
 }
 
 .characterInformation {
@@ -79,15 +64,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 100px;
   width: 100%;
 }
 
 .characterInformation p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-align: center;
-
-  width: 85%;
 }
 
 .characterGenderButton {
@@ -96,7 +79,7 @@
 
 .characterGenderButton button {
   width: 80%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 800;
   background-color: transparent;
 }

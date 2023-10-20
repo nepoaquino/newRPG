@@ -7,16 +7,26 @@
   background-color: #333333f0;
   color: #efefefef;
   border: 1px solid #111111f0;
-  padding: 0 20px 20px 20px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 500px;
-  max-width: 95%;
+  width: 90%;
+  max-width: 400px;
+  z-index: 10;
+  padding-bottom: 5px;
 }
 
 #statsOverview h2 {
-  font-size: 2em;
+  font-size: 1.5rem;
   font-weight: bolder;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: transparent;
+  background-size: 300% 100%;
+  animation: color-change 10s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
 }
 
 #statsView {
@@ -24,33 +34,33 @@
 }
 
 #statsView ul {
-  font-size: 1.3em;
+  font-size: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   list-style: none;
   padding: 0;
-  gap: 20px;
+  line-height: 2rem;
 }
 
 /* <!-- Stat modifiers section --> */
 #statModifiers ul {
   list-style: none;
-  padding: 10px 50px;
+  padding: 10px 40px;
 }
 
 #statModifiers li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3em;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 #statModifiers .buttons button {
-  font-size: 1em;
+  font-size: 1rem;
   padding: 5px 20px;
   background-color: #666;
   color: #efefefef;
@@ -60,32 +70,34 @@
 
 #statModifiers .buttons button:hover,
 #statModifiers .buttons button:active {
-  background-color: #55c55b;
-  color: #fff;
+  background-color: #60f7ffe3;
+  color: black;
 }
 
 #availablePointsText {
-  color: #6dfa74;
-  font-size: 1.4em;
-  font-weight: bold;
+  color: #60f7ffe3;
+  font-size: 1.1rem;
+}
+
+#availablePointsValue {
+  font-weight: 900;
 }
 
 #statsConfirm,
 #statsCancel {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: #666;
   color: #efefefef;
   border: none;
-  cursor: pointer;
-  margin: 10px 10px;
+  margin: 15px 10px;
 }
 
 #statsConfirm:hover,
 #statsCancel:hover,
 #statsConfirm:active,
 #statsCancel:active {
-  background-color: #55c55b;
-  color: #fff;
+  background-color: #60f7ffe3;
+  color: black;
 }

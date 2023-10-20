@@ -41,12 +41,14 @@
   width: 100%;
   text-transform: uppercase;
   color: transparent;
-  background-size: 200% 100%;
-  animation: color-change 4s ease infinite;
-  background-image: radial-gradient(circle, #ffcf76, #241701, #7e5304);
+  background-size: 300% 100%;
+  animation: color-change 5s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
+
+  margin-bottom: 5px;
 }
 
 .charClass .bonusStats {
@@ -96,7 +98,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   #characterClass {
     grid-template-columns: repeat(4, 1fr);
   }
