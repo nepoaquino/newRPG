@@ -94,12 +94,14 @@
 
           <div class="bonusStats">
             <div class="stat-row">
-              <div class="stat-cell"><p>STR: 4</p></div>
-              <div class="stat-cell"><p>AGI: 2</p></div>
+              <div class="stat-cell">
+                <p id="WarriorSTR">STR: 4</p>
+              </div>
+              <div class="stat-cell"><p id="WarriorAGI">AGI: 2</p></div>
             </div>
             <div class="stat-row">
-              <div class="stat-cell"><p>INT: 1</p></div>
-              <div class="stat-cell"><p>VIT: 3</p></div>
+              <div class="stat-cell"><p id="WarriorINT">INT: 1</p></div>
+              <div class="stat-cell"><p id="WarriorVIT">VIT: 3</p></div>
             </div>
           </div>
 
@@ -110,7 +112,9 @@
             />
           </div>
 
-          <button class="selectRoleButton">TAP TO SELECT</button>
+          <button class="selectRoleButton" id="WarriorSelected">
+            TAP TO SELECT
+          </button>
         </div>
 
         <!-- MAGE -->
@@ -123,11 +127,11 @@
           <div class="bonusStats">
             <div class="stat-row">
               <div class="stat-cell"><p>STR: 1</p></div>
-              <div class="stat-cell"><p>AGI: 2</p></div>
+              <div class="stat-cell"><p>AGI: 3</p></div>
             </div>
             <div class="stat-row">
               <div class="stat-cell"><p>INT: 4</p></div>
-              <div class="stat-cell"><p>VIT: 3</p></div>
+              <div class="stat-cell"><p>VIT: 2</p></div>
             </div>
           </div>
           <div class="lineBorderArt">
@@ -136,7 +140,9 @@
               alt="lineBorder"
             />
           </div>
-          <button class="selectRoleButton">TAP TO SELECT</button>
+          <button class="selectRoleButton" id="MageSelected">
+            TAP TO SELECT
+          </button>
         </div>
 
         <!-- ASSASSIN -->
@@ -152,8 +158,8 @@
               <div class="stat-cell"><p>AGI: 4</p></div>
             </div>
             <div class="stat-row">
-              <div class="stat-cell"><p>INT: 1</p></div>
-              <div class="stat-cell"><p>VIT: 2</p></div>
+              <div class="stat-cell"><p>INT: 2</p></div>
+              <div class="stat-cell"><p>VIT: 1</p></div>
             </div>
           </div>
           <div class="lineBorderArt">
@@ -162,7 +168,9 @@
               alt="lineBorder"
             />
           </div>
-          <button class="selectRoleButton">TAP TO SELECT</button>
+          <button class="selectRoleButton" id="AssassinSelected">
+            TAP TO SELECT
+          </button>
         </div>
 
         <!-- ARCHER -->
@@ -188,7 +196,9 @@
               alt="lineBorder"
             />
           </div>
-          <button class="selectRoleButton">TAP TO SELECT</button>
+          <button class="selectRoleButton" id="ArcherSelected">
+            TAP TO SELECT
+          </button>
         </div>
       </div>
 
@@ -235,22 +245,30 @@
           <ul>
             <li>
               Health:
-              <span id="currentHP">100</span><span id="permanentHP">100</span>
+              <span class="stat-value" id="currentHP">100</span
+              ><span class="stat-value" id="permanentHP">100</span>
             </li>
-            <li>Physical-Dmg:<span id="physicalDmg">0</span></li>
+            <li>
+              Physical-Dmg:<span class="stat-value" id="physicalDmg">0</span>
+            </li>
             <li>
               Mana:
-              <span id="currentMP">100</span><span id="permanentMP">100</span>
+              <span class="stat-value" id="currentMP">100</span
+              ><span class="stat-value" id="permanentMP">100</span>
             </li>
-            <li>Magic-Dmg:<span id="magicDmg">0</span></li>
-            <li>Hit-Rate:<span id="hitRate">0</span></li>
-            <li>Physical-Def:<span id="physicalDef">0</span></li>
-            <li>Evasion:<span id="evasion">0</span></li>
-            <li>Magic-Def:<span id="magicDef">0</span></li>
-            <li>Block-Rate:<span id="blockRate">0</span></li>
-            <li>Crit-Rate:<span id="critRate">0</span></li>
-            <li>Resistance:<span id="resistance">0</span></li>
-            <li>Crit-Dmg:<span id="critDmg">0</span></li>
+            <li>Magic-Dmg:<span class="stat-value" id="magicDmg">0</span></li>
+            <li>Hit-Rate:<span class="stat-value" id="hitRate">0</span></li>
+            <li>
+              Physical-Def:<span class="stat-value" id="physicalDef">0</span>
+            </li>
+            <li>Evasion:<span class="stat-value" id="evasion">0</span></li>
+            <li>Magic-Def:<span class="stat-value" id="magicDef">0</span></li>
+            <li>Block-Rate:<span class="stat-value" id="blockRate">0</span></li>
+            <li>Crit-Rate:<span class="stat-value" id="critRate">0</span></li>
+            <li>
+              Resistance:<span class="stat-value" id="resistance">0</span>
+            </li>
+            <li>Crit-Dmg:<span class="stat-value" id="critDmg">0</span></li>
           </ul>
         </div>
 
@@ -290,14 +308,14 @@
           </ul>
         </div>
         <p id="availablePointsText">
-          Available Points: <span id="availablePointsValue">100</span>
+          Available Points: <span id="availablePointsValue">5</span>
         </p>
         <button id="statsConfirm">CONFIRM</button>
         <button id="statsCancel">CANCEL</button>
       </div>
     </main>
 
-    <script src="javascript/gameSetup.js"></script>
     <script src="javascript/stats.js"></script>
+    <script src="javascript/gameSetup.js"></script>
   </body>
 </html>
