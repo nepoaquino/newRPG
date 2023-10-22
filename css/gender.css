@@ -2,7 +2,7 @@
 #genderSelectText {
   display: none;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: auto 0;
   width: 100%;
   padding-top: 10px;
@@ -36,9 +36,9 @@
 }
 
 .character img {
-  max-width: 90%;
   margin: 0 auto;
-  height: auto;
+  max-width: 100%;
+  max-height: 180px;
 }
 
 .character-name {
