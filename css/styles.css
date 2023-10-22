@@ -31,7 +31,7 @@ body {
   color: #111111;
   width: 100%;
   height: 100%;
-  font-size: 16px;
+  font-size: 10px;
   overflow-x: hidden;
 }
 
@@ -53,6 +53,7 @@ body {
 }
 img {
   pointer-events: none;
+  display: block;
 }
 
 header {
@@ -68,7 +69,6 @@ header {
 
 #gameTitleImage img {
   width: 100vmin;
-  height: auto;
 }
 
 .startGameButtonContainer {
@@ -104,8 +104,15 @@ button {
   color: #111111;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   body {
     background-image: url("../background_img/mobile.jpg");
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  html,
+  body {
+    font-size: 15px;
   }
 }

@@ -2,25 +2,25 @@
   position: relative;
   top: 0;
   width: 0 auto;
-  width: 99%;
-  max-width: 800px;
-  border: 1px solid black;
+  width: 500px;
+  max-width: 99%;
   display: none; /* NONE OR FLEX*/
   flex-direction: row;
   align-items: center;
-  margin: 5px 0;
+  margin-top: 2px;
   justify-content: space-evenly;
 }
 
 .menu-button {
   text-transform: uppercase;
-  width: 100%;
+  width: 30%;
   margin: 5px;
-  padding: 8px 10px;
-  font-size: 0.8rem;
+  padding: 5px 10px;
+  font-size: 1rem;
   background-color: #333333f0;
   color: #efefefef;
   font-weight: 800;
+  font-family: "Press Start 2P";
 }
 
 .menu-button:hover,
@@ -33,7 +33,7 @@
   position: relative;
   top: 0;
   margin: 0 auto;
-  width: 800px;
+  width: 700px;
   max-width: 99%;
   display: none; /* NONE OR FLEX*/
   flex-direction: row;
@@ -42,7 +42,7 @@
 }
 
 #characterImageContainer {
-  width: 120px;
+  width: 100px;
   display: inline;
   border: 1px solid black;
 }
@@ -54,23 +54,22 @@
 
 #characterInfoTextsContainer {
   background-color: #333333dd;
-  color: #efefefef;
   flex: 1;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: space-evenly;
-  padding-left: 5px;
+  padding: 0 10px;
 }
 
 .bar p {
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   text-align: center;
   color: black;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 900;
 }
 

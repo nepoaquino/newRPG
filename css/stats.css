@@ -10,20 +10,25 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   z-index: 10;
   padding-bottom: 5px;
 }
 
 #statsOverview h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bolder;
   padding: 15px 0;
   text-transform: uppercase;
   color: transparent;
   background-size: 300% 100%;
   animation: color-change 10s ease infinite;
-  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
+  background-image: radial-gradient(
+    circle,
+    #60f7ffe3,
+    #000000,
+    rgb(29, 77, 77)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
@@ -34,12 +39,12 @@
 }
 
 #statsView ul {
-  font-size: 1rem;
+  font-size: 1.3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   list-style: none;
   padding: 0;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 /* <!-- Stat modifiers section --> */
@@ -52,7 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -60,7 +65,7 @@
 }
 
 #statModifiers .buttons button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 5px 20px;
   background-color: #666;
   color: #efefefef;
@@ -76,7 +81,7 @@
 
 #availablePointsText {
   color: #60f7ffe3;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 #availablePointsValue {
