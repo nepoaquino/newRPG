@@ -12,7 +12,6 @@
   text-align: center;
   background: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png")
     center no-repeat;
-
   background-size: 100% 100%;
   height: auto;
   padding-bottom: 20px;
@@ -23,13 +22,12 @@
   max-width: 75%;
   height: auto;
   position: relative;
-  top: 15px;
+  top: 20px;
 }
 
 .charClass img:first-child {
   margin: auto;
-  width: 100%;
-  height: 100%;
+  max-width: 90%;
 }
 
 .charClass h3 {
