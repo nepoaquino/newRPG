@@ -1,24 +1,31 @@
-// Variables for DOM elements
+// DOM elements
 const statsOverview = document.querySelector("#statsOverview");
+statsOverview.style.display = "none";
 const statsButton = document.querySelector("#statsButton");
 const statsConfirmButton = document.querySelector("#statsConfirm");
 const availablePointsElement = document.querySelector("#availablePointsValue");
+const statModifiers = document.querySelector("#statModifiers");
+const statsCancelButton = document.querySelector("#statsCancel");
 
-// Rest of your code remains the same.
+// Constants for initial values
+let INITIAL_AVAILABLE_POINTS = 5;
+const INITIAL_HP = 100;
+const INITIAL_MP = 100;
+const INITIAL_CRIT_DMG = 100;
+const BASE_CRIT_RATE = 0.1;
 
-// Initial available points
-let availablePoints = 100;
+let availablePoints = INITIAL_AVAILABLE_POINTS;
 
-// Character stats
+// Character stats (unchanged)
 let stats = {
   str: 0,
   int: 0,
   vit: 0,
   agi: 0,
-  currentHP: 80,
-  currentMP: 80,
-  permanentHP: 100,
-  permanentMP: 100,
+  currentHP: INITIAL_HP,
+  currentMP: INITIAL_MP,
+  permanentHP: INITIAL_HP,
+  permanentMP: INITIAL_MP,
   currentExperience: 0,
   totalExperience: 100,
   level: 1,
@@ -32,34 +39,50 @@ let stats = {
   blockRate: 0,
   critRate: 0,
   resistance: 0,
-  critDmg: 100,
+  critDmg: INITIAL_CRIT_DMG,
 };
-
 // Permanently allocated stats object
 let permanentlyAllocatedStats = { ...stats };
 
+// Event listeners
+statModifiers.addEventListener("click", handleStatModification);
+statsButton.addEventListener("click", toggleStats);
+statsConfirmButton.addEventListener("click", saveStatsAndToggle);
+statsCancelButton.addEventListener("click", revertStatsAndToggle);
+
+// Event listeners for character selection
+document
+  .getElementById("WarriorSelected")
+  .addEventListener("click", () => selectCharacter(3, 1, 4, 2));
+document
+  .getElementById("MageSelected")
+  .addEventListener("click", () => selectCharacter(2, 4, 1, 3));
+document
+  .getElementById("AssassinSelected")
+  .addEventListener("click", () => selectCharacter(1, 2, 3, 4));
+document
+  .getElementById("ArcherSelected")
+  .addEventListener("click", () => selectCharacter(2, 3, 1, 4));
+
 // Function to update the stats view with current allocations
 function updateStatsView() {
-  // Extract stats for easier usage
   const { vit, int, str, agi } = stats;
-
-  // Apply bonuses for VIT and INT
-  stats.currentHP = 80 + vit;
-  stats.permanentHP = 100 + vit;
-  stats.currentMP = 80 + int;
-  stats.permanentMP = 100 + int;
-
-  // Calculate the bonuses for each allocated stat
+  stats.currentHP = INITIAL_HP + vit * 5;
+  stats.permanentHP = INITIAL_HP + vit * 5;
+  stats.currentMP = INITIAL_MP + int * 5;
+  stats.permanentMP = INITIAL_MP + int * 5;
   stats.physicalDmg = str;
   stats.physicalDef = str + vit;
-  stats.magicDmg = int;
-  stats.magicDef = vit + int;
-  stats.critRate = (0.1 * 0.1).toFixed(1); // Round to 1 decimal place
-  stats.critDmg = 100 + int * 2;
+  stats.magicDmg = int * 1.5;
+  stats.magicDef = vit + int * 1.5;
+  stats.critRate = parseFloat(
+    (BASE_CRIT_RATE * BASE_CRIT_RATE + agi / 5).toFixed(1)
+  );
+  stats.critDmg = INITIAL_CRIT_DMG + int * 2;
   stats.hitRate = agi;
   stats.blockRate = str + vit;
-  stats.resistance = agi;
-  stats.evasion = agi * 2;
+  stats.resistance = agi + vit;
+  stats.evasion = agi;
 
   // Update the elements showing different stats
   document.querySelector("#strValue").textContent = str;
@@ -80,6 +103,32 @@ function updateStatsView() {
   document.querySelector("#critRate").textContent = `${stats.critRate}%`;
   document.querySelector("#resistance").textContent = stats.resistance;
   document.querySelector("#critDmg").textContent = `${stats.critDmg}%`;
+
+  // Temporarily change the font color to green for the updated stat values
+  for (const stat in stats) {
+    const statElement = document.querySelector(`#${stat}Value`);
+    if (statElement) {
+      // Add this conditional check
+      if (stats[stat] !== permanentlyAllocatedStats[stat]) {
+        statElement.classList.add("temp-color");
+      } else {
+        statElement.classList.remove("temp-color");
+      }
+    }
+  }
+
+  // Temporarily change the font color to green for all <span> elements inside #statsView
+  const statValueElements = document.querySelectorAll(".stat-value");
+  if (statValueElements) {
+    statValueElements.forEach((statElement) => {
+      const statId = statElement.id;
+      if (statElement && stats[statId] !== permanentlyAllocatedStats[statId]) {
+        statElement.classList.add("temp-color");
+      } else if (statElement) {
+        statElement.classList.remove("temp-color");
+      }
+    });
+  }
 }
 
 // Function to handle stat modifications
@@ -87,62 +136,55 @@ function handleStatModification(event) {
   if (event.target.tagName === "BUTTON") {
     const stat = event.target.dataset.stat;
 
-    // Check if the plus button is clicked and there are available points
     if (event.target.classList.contains("plusButton") && availablePoints > 0) {
-      stats[stat]++; // Increment the stat value
-      availablePoints--; // Decrease available points
+      stats[stat]++;
+      availablePoints--;
     } else if (
       event.target.classList.contains("minusButton") &&
       stats[stat] > permanentlyAllocatedStats[stat]
     ) {
-      stats[stat]--; // Decrement the stat value
-      availablePoints++; // Increase available points
+      stats[stat]--;
+      availablePoints++;
     }
 
-    // Update the available points display
     availablePointsElement.textContent = availablePoints;
-
-    // Update the stats view to reflect the changes
     updateStatsView();
   }
 }
 
-statsOverview.style.display = "none";
-// Function to toggle the visibility of statsOverview
+// Toggle stats visibility
 function toggleStats() {
-  if (statsOverview.style.display === "none") {
-    statsOverview.style.display = "block";
-    updateStatsView(); // Update the stats view with current allocations
-  } else {
-    statsOverview.style.display = "none";
+  statsOverview.style.display =
+    statsOverview.style.display === "none" ? "block" : "none";
+  if (statsOverview.style.display === "block") {
+    updateStatsView();
   }
 }
 
-// Function to save the stats allocations and toggle the visibility of statsOverview
-function saveStatsAndToggle() {
-  // Update the permanently allocated stats
-  permanentlyAllocatedStats = { ...stats };
+// Function to set character stats and update view
+function selectCharacter(vitValue, intValue, strValue, agiValue) {
+  stats.vit = vitValue;
+  stats.int = intValue;
+  stats.str = strValue;
+  stats.agi = agiValue;
 
-  // Hide the statsOverview
-  statsOverview.style.display = "none";
-
-  // Auto Update the character information
-  updateCharacterInformation();
+  updateStatsView();
 }
 
-// Event delegation for plus and minus buttons
-const statModifiers = document.querySelector("#statModifiers");
-statModifiers.addEventListener("click", handleStatModification);
-
-// Event listener for the statsButton click
-statsButton.addEventListener("click", toggleStats);
-
-// Event listener for the statsConfirmButton click
-statsConfirmButton.addEventListener("click", saveStatsAndToggle);
-
-// Event listener for the "CANCEL" button
-const statsCancelButton = document.querySelector("#statsCancel");
-statsCancelButton.addEventListener("click", function () {
-  // Hide the statsOverview
+// Save stats and toggle visibility
+function saveStatsAndToggle() {
+  permanentlyAllocatedStats = { ...stats };
   statsOverview.style.display = "none";
-});
+  availablePointsElement.textContent = availablePoints;
+  INITIAL_AVAILABLE_POINTS = availablePoints;
+  updateStatsView();
+}
+
+// Revert stats and toggle visibility
+function revertStatsAndToggle() {
+  stats = { ...permanentlyAllocatedStats };
+  availablePoints = INITIAL_AVAILABLE_POINTS;
+  statsOverview.style.display = "none";
+  availablePointsElement.textContent = availablePoints;
+  updateStatsView();
+}

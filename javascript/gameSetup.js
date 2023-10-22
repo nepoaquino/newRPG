@@ -3,8 +3,8 @@ const header = document.querySelector("header");
 const startBtn = document.getElementById("startGameButton");
 const genderSection = document.getElementById("genderSelection");
 const genderText = document.getElementById("genderSelectText");
-const maleBtn = document.getElementById("selectedGenderMale");
-const femaleBtn = document.getElementById("selectedGenderFemale");
+const selectedGenderMale = document.getElementById("selectedGenderMale");
+const selectedGenderFemale = document.getElementById("selectedGenderFemale");
 const classSection = document.getElementById("characterClass");
 const warrior = document.getElementById("warriorImage");
 const mage = document.getElementById("mageImage");
@@ -32,7 +32,7 @@ startBtn.addEventListener("click", () => {
 });
 
 // When you click the male
-maleBtn.addEventListener("click", () => {
+selectedGenderMale.addEventListener("click", () => {
   genderText.innerHTML = "Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
@@ -43,7 +43,7 @@ maleBtn.addEventListener("click", () => {
 });
 
 // When you click the female
-femaleBtn.addEventListener("click", () => {
+selectedGenderFemale.addEventListener("click", () => {
   genderText.innerHTML = "Select Role";
   hide(genderSection);
   show(classSection, "grid"); // show as Grid
@@ -60,5 +60,6 @@ selectRoleButtons.forEach((button) => {
     show(gameOverview, "flex");
     hide(classSection);
     hide(genderText);
+    permanentlyAllocatedStats = { ...stats };
   });
 });
