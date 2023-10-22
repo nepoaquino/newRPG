@@ -26,8 +26,8 @@
   background-image: radial-gradient(
     circle,
     #60f7ffe3,
-    #000000,
-    rgb(29, 77, 77)
+    rgb(50, 107, 97),
+    #01161e
   );
   -webkit-background-clip: text;
   background-clip: text;

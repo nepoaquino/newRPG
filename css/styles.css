@@ -1,5 +1,6 @@
-/* Reset and global styles */
-
+.temp-color {
+  color: #bdff60f3;
+}
 @keyframes color-change {
   0% {
     background-position: 0% 50%;

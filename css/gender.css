@@ -10,7 +10,7 @@
   color: transparent;
   background-size: 300% 100%;
   animation: color-change 10s ease infinite;
-  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
+  background-image: radial-gradient(circle, #ffcf76, #121308, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
 }
