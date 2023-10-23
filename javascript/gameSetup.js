@@ -11,7 +11,8 @@ const mage = document.getElementById("mageImage");
 const assassin = document.getElementById("assassinImage");
 const archer = document.getElementById("archerImage");
 const selectRoleButtons = document.querySelectorAll(".selectRoleButton");
-const gameOverview = document.getElementById("gameOverview");
+// const gameOverview = document.getElementById("gameOverview");
+const gameView = document.getElementById("gameView");
 const mainMenuContainer = document.getElementById("mainMenuContainer");
 
 let gender = "";
@@ -66,7 +67,8 @@ selectedGenderFemale.addEventListener("click", () => {
 selectRoleButtons.forEach((button) => {
   button.addEventListener("click", () => {
     show(mainMenuContainer, "flex");
-    show(gameOverview, "flex");
+    // show(gameOverview, "flex");
+    show(gameView);
     hide(classSection);
     hide(genderText);
     permanentlyAllocatedStats = { ...stats };
