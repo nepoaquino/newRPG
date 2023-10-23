@@ -14,6 +14,13 @@ const selectRoleButtons = document.querySelectorAll(".selectRoleButton");
 const gameOverview = document.getElementById("gameOverview");
 const mainMenuContainer = document.getElementById("mainMenuContainer");
 
+let gender = "";
+const characterProfilePicture = document.getElementById(
+  "characterProfilePicture"
+);
+
+let selectedCharacterRoles = "";
+
 // Function to hide something
 function hide(element) {
   element.style.display = "none";
@@ -40,6 +47,7 @@ selectedGenderMale.addEventListener("click", () => {
   mage.src = "character/male/Mage.png";
   assassin.src = "character/male/Assassin.png";
   archer.src = "character/male/Archer.png";
+  gender = "male";
 });
 
 // When you click the female
@@ -51,9 +59,10 @@ selectedGenderFemale.addEventListener("click", () => {
   mage.src = "character/female/Mage.png";
   assassin.src = "character/female/Assassin.png";
   archer.src = "character/female/Archer.png";
+  gender = "female";
 });
 
-// WHEN USER SELECT CHARACTER ROLE
+// WHEN USER SELECT CHARACTER ROLE CHANGE THE MAIN MENU IMAGE ACCORDINGLY
 selectRoleButtons.forEach((button) => {
   button.addEventListener("click", () => {
     show(mainMenuContainer, "flex");
@@ -61,5 +70,20 @@ selectRoleButtons.forEach((button) => {
     hide(classSection);
     hide(genderText);
     permanentlyAllocatedStats = { ...stats };
+
+    // Define a map for character role to image filename
+    const roleToImage = {
+      WarriorSelected: "Warrior.png",
+      MageSelected: "Mage.png",
+      AssassinSelected: "Assassin.png",
+      ArcherSelected: "Archer.png",
+    };
+
+    // Check if the button's ID is in the map, and set the selectedCharacterRoles accordingly
+    if (roleToImage.hasOwnProperty(button.id)) {
+      selectedCharacterRoles = roleToImage[button.id];
+    }
+
+    characterProfilePicture.src = `character/${gender}/${selectedCharacterRoles}`;
   });
 });
