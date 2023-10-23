@@ -1,9 +1,17 @@
+#gameView {
+  display: none;
+  height: 81vh;
+  max-height: 99%;
+  width: 600px;
+  max-width: 99%;
+  background-color: rgba(245, 222, 179, 0.255);
+  z-index: 1;
+}
+
 #mainMenuContainer {
   position: relative;
   top: 0;
-  width: 0 auto;
-  width: 500px;
-  max-width: 99%;
+  margin: 0 auto;
   display: none; /* NONE OR FLEX*/
   flex-direction: row;
   align-items: center;
@@ -33,18 +41,17 @@
   position: relative;
   top: 0;
   margin: 0 auto;
-  width: 700px;
-  max-width: 99%;
-  display: none; /* NONE OR FLEX*/
+
+  display: flex; /* NONE OR FLEX*/
   flex-direction: row;
   justify-content: space-between;
-  z-index: -2;
+  z-index: 1;
 }
 
 #characterImageContainer {
   width: 100px;
   display: inline;
-  border: 1px solid black;
+  border: 3px solid rgba(0, 0, 0, 0.5);
 }
 
 #characterImageContainer img {
@@ -60,6 +67,7 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .bar p {
@@ -101,4 +109,52 @@
 .experience {
   background-color: #22a422; /* Green for Experience */
   width: 70%;
+}
+
+#storyDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 0;
+  margin: 10px auto;
+  width: 100%;
+  height: 95%;
+  border: solid black;
+  background-color: rgba(238, 232, 170, 0.8);
+}
+
+#storyDiv h3 {
+  margin: 5px auto 10px auto;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #33333333;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#storyParagraphContainer {
+  border: 0.5 px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 5px 15px;
+  font-size: 1.5rem;
+}
+
+#gameMenuButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#gameMenuButtons button {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  margin: 0 10px;
+  background-color: #33333355;
+  color: black;
 }
