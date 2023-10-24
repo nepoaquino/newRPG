@@ -119,7 +119,7 @@
     #ff1a1a,
     #ff7d7d
   ); /* Red gradient for Health */
-  width: 80%;
+
   height: 20px;
 }
 
@@ -129,7 +129,7 @@
     #1952ff,
     #7b9bfc
   ); /* Blue gradient for Mana */
-  width: 60%;
+  /* width: 60%; */
   height: 20px;
 }
 
@@ -139,7 +139,7 @@
     #1dff1d,
     #80ff80
   ); /* Green gradient for Experience */
-  width: 40%;
+  width: 50%;
   height: 20px;
 }
 
