@@ -71,8 +71,9 @@ selectRoleButtons.forEach((button) => {
     show(gameView);
     hide(classSection);
     hide(genderText);
-    permanentlyAllocatedStats = { ...stats };
 
+    permanentlyAllocatedStats = { ...stats };
+    updateStatsView();
     // Define a map for character role to image filename
     const roleToImage = {
       WarriorSelected: "Warrior.png",

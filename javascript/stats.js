@@ -7,7 +7,6 @@ const availablePointsElement = document.querySelector("#availablePointsValue");
 const statModifiers = document.querySelector("#statModifiers");
 const statsCancelButton = document.querySelector("#statsCancel");
 
-// Constants for initial values
 let INITIAL_AVAILABLE_POINTS = 5;
 const INITIAL_HP = 100;
 const INITIAL_MP = 100;
@@ -129,6 +128,9 @@ function updateStatsView() {
       }
     });
   }
+
+  Health_Percentage();
+  Mana_Percentage();
 }
 
 // Function to handle stat modifications
@@ -187,4 +189,42 @@ function revertStatsAndToggle() {
   statsOverview.style.display = "none";
   availablePointsElement.textContent = availablePoints;
   updateStatsView();
+}
+
+const healthElements = document.querySelectorAll(".health");
+const HP_PercentageText = document.querySelector("#HP_Percentage");
+
+function Health_Percentage() {
+  // Calculate the HP percentage
+  const percentage =
+    (stats.currentHP / permanentlyAllocatedStats.currentHP) * 100;
+
+  // Loop through each health element and update its width
+  healthElements.forEach((healthElement) => {
+    healthElement.style.width = `${percentage.toFixed(0)}%`;
+  });
+
+  // Update the HP percentage text
+  // HP_PercentageText.innerHTML = `${percentage.toFixed(0)}%`;
+
+  HP_PercentageText.innerHTML = `${stats.currentHP} / ${permanentlyAllocatedStats.currentHP}`;
+}
+
+const manaElements = document.querySelectorAll(".mana");
+const MP_PercentageText = document.querySelector("#MP_Percentage");
+
+function Mana_Percentage() {
+  // Calculate the HP percentage
+  const percentage =
+    (stats.currentMP / permanentlyAllocatedStats.currentMP) * 100;
+
+  // Loop through each health element and update its width
+  manaElements.forEach((manaElement) => {
+    manaElement.style.width = `${percentage.toFixed(0)}%`;
+  });
+
+  // Update the HP percentage text
+  // HP_PercentageText.innerHTML = `${percentage.toFixed(0)}%`;
+
+  MP_PercentageText.innerHTML = `${stats.currentMP} / ${permanentlyAllocatedStats.currentMP}`;
 }
