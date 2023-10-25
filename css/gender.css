@@ -2,7 +2,7 @@
 #genderSelectText {
   display: none;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin: auto 0;
   width: 100%;
   padding-top: 10px;
@@ -32,7 +32,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .character img {
@@ -42,7 +42,7 @@
 }
 
 .character-name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
   text-transform: capitalize;
   padding-top: 10px;
@@ -63,13 +63,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  width: 80%;
+  height: 160px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
 .characterInformation p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -79,7 +79,7 @@
 
 .characterGenderButton button {
   width: 80%;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 800;
   background-color: transparent;
 }
