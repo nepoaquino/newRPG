@@ -178,6 +178,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
+  border: solid red;
 }
 
 #storyParagraphContainer {
@@ -189,7 +190,8 @@
   margin: 0.5rem 3rem;
   line-height: 1.5;
   font-size: 1.5rem;
-  padding: 1rem;
+
+  border: solid red;
 }
 
 .storyParagraph {
@@ -211,8 +213,7 @@
   font-size: 2rem;
   padding: 0.5rem 1rem;
   margin: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  color: rgb(0, 0, 0);
+  color: rgb(40, 30, 15);
+  background-color: #d9c1943c;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
