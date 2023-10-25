@@ -178,7 +178,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
-  border: solid red;
 }
 
 #storyParagraphContainer {
@@ -190,8 +189,6 @@
   margin: 0.5rem 3rem;
   line-height: 1.5;
   font-size: 1.5rem;
-
-  border: solid red;
 }
 
 .storyParagraph {
