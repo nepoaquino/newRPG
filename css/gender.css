@@ -33,6 +33,7 @@
   background-repeat: no-repeat;
   height: auto;
   padding: 2.5rem;
+  opacity: 0.9;
 }
 
 .character img {
@@ -42,10 +43,11 @@
 }
 
 .character-name {
-  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6rem;
   font-weight: 800;
   text-transform: capitalize;
-  padding-top: 10px;
+  margin-top: 1rem;
   color: transparent;
   background-size: 300% 100%;
   animation: color-change 5s ease infinite;
@@ -69,7 +71,7 @@
 }
 
 .characterInformation p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -78,8 +80,9 @@
 }
 
 .characterGenderButton button {
-  width: 80%;
-  font-size: 1.3rem;
-  font-weight: 800;
   background-color: transparent;
+  width: 80%;
+  font-size: 1.4rem;
+  font-weight: 800;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

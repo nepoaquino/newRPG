@@ -15,6 +15,7 @@
   background-size: 100% 100%;
   height: auto;
   padding-bottom: 20px;
+  opacity: 0.9;
 }
 
 .characterRoleImage {
@@ -31,6 +32,7 @@
 }
 
 .charClass h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -82,7 +84,7 @@
   display: block;
   margin: 0 auto;
   width: 75%;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 800;
 
   background: transparent;
@@ -90,6 +92,7 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media (min-width: 650px) {

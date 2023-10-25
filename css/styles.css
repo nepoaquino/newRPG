@@ -92,8 +92,8 @@ header {
   height: 100%;
 }
 
-#startGameButton:hover,
-#startGameButton:active {
+button:hover,
+button:active {
   transform: scale(1.1);
 }
 
