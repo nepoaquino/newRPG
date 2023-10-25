@@ -80,9 +80,14 @@
 }
 
 .characterGenderButton button {
-  background-color: transparent;
-  width: 80%;
+  color: transparent;
+  background-size: 100% 100%;
+  background-image: radial-gradient(circle, #b38b42, rgb(40, 30, 15));
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+
+  width: 90%;
   font-size: 1.4rem;
   font-weight: 800;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

@@ -16,19 +16,15 @@
 }
 
 #statsOverview h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bolder;
-  padding: 15px 0;
+  padding: 1.5rem 0;
   text-transform: uppercase;
+
   color: transparent;
   background-size: 300% 100%;
-  animation: color-change 10s ease infinite;
-  background-image: radial-gradient(
-    circle,
-    #60f7ffe3,
-    rgb(50, 107, 97),
-    #01161e
-  );
+  animation: color-change 5s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
@@ -39,7 +35,7 @@
 }
 
 #statsView ul {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   list-style: none;
@@ -50,7 +46,7 @@
 /* <!-- Stat modifiers section --> */
 #statModifiers ul {
   list-style: none;
-  padding: 10px 40px;
+  padding: 1rem 4rem;
 }
 
 #statModifiers li {
@@ -61,12 +57,12 @@
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  padding: 5px 0;
+  padding: 0.5rem 0;
 }
 
 #statModifiers .buttons button {
   font-size: 1.5rem;
-  padding: 5px 20px;
+  padding: 0.5rem 2rem;
   background-color: #666;
   color: #efefefef;
   border: none;
@@ -75,22 +71,28 @@
 
 #statModifiers .buttons button:hover,
 #statModifiers .buttons button:active {
-  background-color: #60f7ffe3;
+  background-color: #ffcf76;
   color: black;
 }
 
 #availablePointsText {
-  color: #60f7ffe3;
+  color: transparent;
+  background-size: 100% 100%;
+  background-image: radial-gradient(circle, #ffcf76, rgb(112, 84, 36));
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
   font-size: 1.5rem;
 }
 
 #availablePointsValue {
   font-weight: 900;
+  font-size: 1.8rem;
 }
 
 #statsConfirm,
 #statsCancel {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 5px 10px;
   background-color: #666;
@@ -103,6 +105,6 @@
 #statsCancel:hover,
 #statsConfirm:active,
 #statsCancel:active {
-  background-color: #60f7ffe3;
-  color: black;
+  background-color: #ffcf76;
+  color: rgb(78, 62, 34);
 }

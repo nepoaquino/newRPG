@@ -189,8 +189,15 @@
   margin: 0.5rem 3rem;
   line-height: 1.5;
   font-size: 1.5rem;
-
   padding: 1rem;
+}
+
+.storyParagraph {
+  color: transparent;
+  background-size: 100% 100%;
+  background-image: radial-gradient(circle, rgb(36, 26, 13), #795a1f);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 #gameMenuButtons {

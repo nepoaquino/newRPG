@@ -80,13 +80,19 @@
 }
 
 .charClass button {
+  color: transparent;
+  background-size: 100% 100%;
+  background-image: radial-gradient(circle, #b38b42, rgb(40, 30, 15));
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+
   display: block;
   margin: 0 auto;
   width: 75%;
   font-size: 1.4rem;
   font-weight: 800;
 
-  background: transparent;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
