@@ -1,25 +1,31 @@
-// Get the start button and different sections
-const header = document.querySelector("header");
-const startBtn = document.getElementById("startGameButton");
-const genderSection = document.getElementById("genderSelection");
-const genderText = document.getElementById("genderSelectText");
-const selectedGenderMale = document.getElementById("selectedGenderMale");
-const selectedGenderFemale = document.getElementById("selectedGenderFemale");
-const classSection = document.getElementById("characterClass");
-const warrior = document.getElementById("warriorImage");
-const mage = document.getElementById("mageImage");
-const assassin = document.getElementById("assassinImage");
-const archer = document.getElementById("archerImage");
-const selectRoleButtons = document.querySelectorAll(".selectRoleButton");
-// const gameOverview = document.getElementById("gameOverview");
-const gameView = document.getElementById("gameView");
-const mainMenuContainer = document.getElementById("mainMenuContainer");
+// Select elements
+const elements = {
+  header: document.querySelector("header"),
+  startBtn: document.getElementById("startGameButton"),
+  genderSection: document.getElementById("genderSelection"),
+  genderText: document.getElementById("genderSelectText"),
+  selectedGenderMale: document.getElementById("selectedGenderMale"),
+  selectedGenderFemale: document.getElementById("selectedGenderFemale"),
+  classSection: document.getElementById("characterClass"),
+  warrior: document.getElementById("warriorImage"),
+  mage: document.getElementById("mageImage"),
+  assassin: document.getElementById("assassinImage"),
+  archer: document.getElementById("archerImage"),
+  selectRoleButtons: document.querySelectorAll(".selectRoleButton"),
+  gameView: document.getElementById("gameView"),
+  mainMenuContainer: document.getElementById("mainMenuContainer"),
+  audio: document.getElementById("bgAudio"),
+  settingsButton: document.querySelector("#settingsButton"),
+  gameSettingsContainer: document.querySelector("#gameSettingsContainer"),
+  statsButton: document.querySelector("#statsButton"),
+  statsOverview: document.querySelector("#statsOverview"),
+  characterProfilePicture: document.getElementById("characterProfilePicture"),
+};
 
+// Initialize visibility
+elements.gameSettingsContainer.style.display = "none";
+elements.statsOverview.style.display = "none";
 let gender = "";
-const characterProfilePicture = document.getElementById(
-  "characterProfilePicture"
-);
-
 let selectedCharacterRoles = "";
 
 // Function to hide something
@@ -32,49 +38,30 @@ function show(element, display = "block") {
   element.style.display = display;
 }
 
-// When you click the start button
-startBtn.addEventListener("click", () => {
-  hide(header);
-  show(genderText);
-  show(genderSection, "flex"); // show as Flex
+// Event listeners
+elements.startBtn.addEventListener("click", () => {
+  hide(elements.header);
+  show(elements.genderText);
+  show(elements.genderSection, "flex");
+  elements.audio.volume = 1;
+  elements.audio.play();
 });
 
-// When you click the male
-selectedGenderMale.addEventListener("click", () => {
-  genderText.innerHTML = "Select Role";
-  hide(genderSection);
-  show(classSection, "grid"); // show as Grid
-  warrior.src = "character/male/Warrior.png";
-  mage.src = "character/male/Mage.png";
-  assassin.src = "character/male/Assassin.png";
-  archer.src = "character/male/Archer.png";
-  gender = "male";
+elements.selectedGenderMale.addEventListener("click", () => {
+  selectGender("male");
 });
 
-// When you click the female
-selectedGenderFemale.addEventListener("click", () => {
-  genderText.innerHTML = "Select Role";
-  hide(genderSection);
-  show(classSection, "grid"); // show as Grid
-  warrior.src = "character/female/Warrior.png";
-  mage.src = "character/female/Mage.png";
-  assassin.src = "character/female/Assassin.png";
-  archer.src = "character/female/Archer.png";
-  gender = "female";
+elements.selectedGenderFemale.addEventListener("click", () => {
+  selectGender("female");
 });
 
-// WHEN USER SELECT CHARACTER ROLE CHANGE THE MAIN MENU IMAGE ACCORDINGLY
-selectRoleButtons.forEach((button) => {
+elements.selectRoleButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    show(mainMenuContainer, "flex");
-    // show(gameOverview, "flex");
-    show(gameView);
-    hide(classSection);
-    hide(genderText);
+    show(elements.mainMenuContainer, "flex");
+    show(elements.gameView);
+    hide(elements.classSection);
+    hide(elements.genderText);
 
-    permanentlyAllocatedStats = { ...stats };
-    updateStatsView();
-    // Define a map for character role to image filename
     const roleToImage = {
       WarriorSelected: "Warrior.png",
       MageSelected: "Mage.png",
@@ -82,11 +69,41 @@ selectRoleButtons.forEach((button) => {
       ArcherSelected: "Archer.png",
     };
 
-    // Check if the button's ID is in the map, and set the selectedCharacterRoles accordingly
     if (roleToImage.hasOwnProperty(button.id)) {
       selectedCharacterRoles = roleToImage[button.id];
     }
 
-    characterProfilePicture.src = `character/${gender}/${selectedCharacterRoles}`;
+    elements.characterProfilePicture.src = `character/${gender}/${selectedCharacterRoles}`;
   });
 });
+
+elements.statsButton.addEventListener("click", toggleStats);
+elements.settingsButton.addEventListener("click", toggleSettings);
+
+// Functions
+function selectGender(selectedGender) {
+  elements.genderText.innerHTML = "Select Role";
+  hide(elements.genderSection);
+  show(elements.classSection, "grid");
+  elements.warrior.src = `character/${selectedGender}/Warrior.png`;
+  elements.mage.src = `character/${selectedGender}/Mage.png`;
+  elements.assassin.src = `character/${selectedGender}/Assassin.png`;
+  elements.archer.src = `character/${selectedGender}/Archer.png`;
+  gender = selectedGender;
+}
+
+function toggleStats() {
+  elements.statsOverview.style.display =
+    elements.statsOverview.style.display === "none" ? "block" : "none";
+  if (elements.statsOverview.style.display === "block") {
+    updateStatsView();
+  }
+}
+
+function toggleSettings() {
+  elements.gameSettingsContainer.style.display =
+    elements.gameSettingsContainer.style.display === "none" ? "grid" : "none";
+  if (elements.statsOverview.style.display === "grid") {
+    updateStatsView();
+  }
+}

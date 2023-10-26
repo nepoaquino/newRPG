@@ -1,7 +1,4 @@
 // DOM elements
-const statsOverview = document.querySelector("#statsOverview");
-statsOverview.style.display = "none";
-const statsButton = document.querySelector("#statsButton");
 const statsConfirmButton = document.querySelector("#statsConfirm");
 const availablePointsElement = document.querySelector("#availablePointsValue");
 const statModifiers = document.querySelector("#statModifiers");
@@ -45,7 +42,7 @@ let permanentlyAllocatedStats = { ...stats };
 
 // Event listeners
 statModifiers.addEventListener("click", handleStatModification);
-statsButton.addEventListener("click", toggleStats);
+
 statsConfirmButton.addEventListener("click", saveStatsAndToggle);
 statsCancelButton.addEventListener("click", revertStatsAndToggle);
 
@@ -154,15 +151,6 @@ function handleStatModification(event) {
   }
 }
 
-// Toggle stats visibility
-function toggleStats() {
-  statsOverview.style.display =
-    statsOverview.style.display === "none" ? "block" : "none";
-  if (statsOverview.style.display === "block") {
-    updateStatsView();
-  }
-}
-
 // Function to set character stats and update view
 function selectCharacter(vitValue, intValue, strValue, agiValue) {
   stats.vit = vitValue;
@@ -222,9 +210,6 @@ function Mana_Percentage() {
   manaElements.forEach((manaElement) => {
     manaElement.style.width = `${percentage.toFixed(0)}%`;
   });
-
-  // Update the HP percentage text
-  // HP_PercentageText.innerHTML = `${percentage.toFixed(0)}%`;
 
   MP_PercentageText.innerHTML = `${stats.currentMP} / ${permanentlyAllocatedStats.currentMP}`;
 }
