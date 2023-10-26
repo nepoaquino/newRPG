@@ -1,0 +1,94 @@
+/* GAME SETTINGS CONTAINER */
+#gameSettingsContainer {
+  display: none; /*GRID OR NONE */
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.94
+  ); /* Slightly transparent background */
+  color: #efefef;
+  border: 1px solid rgba(17, 17, 17, 0.94); /* Slightly transparent border */
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 500px;
+  z-index: 999;
+  padding-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif; /* Add a default font family */
+  border: solid red;
+}
+
+/* GAME SETTINGS TITLE */
+#gameSettingsContainer h2 {
+  font-size: 2.5rem;
+  font-weight: bold; /* Bolder font weight */
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ffcf76, #000, rgb(107, 86, 50));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  animation: color-change 5s ease infinite;
+  background-size: 300% 100%;
+  border: solid red;
+}
+
+/* GAME SETTINGS BUTTONS */
+#gameSettingsContainer button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: #666;
+  color: #efefefef;
+  border: none;
+  cursor: pointer; /* Add a pointer cursor to buttons */
+}
+
+#centeredButtons p {
+  width: 10rem;
+  border: solid red;
+}
+/* HOME BUTTON */
+#homeSettings button {
+  background-color: #333; /* Update button background color */
+  color: #efefefef;
+  border: none;
+  font-weight: bold;
+  border: solid red;
+}
+
+/* SETTINGS (Font Size and Sound) */
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+/* VOLUME UP AND DOWN BUTTONS */
+.setting #volumeUP,
+.setting #VolumeDOWN {
+  background-color: #666;
+  color: #efefefef;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* FONT SIZE AND VOLUME PERCENTAGE TEXT */
+.setting p {
+  margin: 0;
+}
