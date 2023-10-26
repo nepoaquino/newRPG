@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "THE LEGEND OF ZELDA";
+  src: url("../fonts/TheWildBreathofZelda.otf") format("opentype");
+}
+
 .temp-color {
   color: #bdff60f3;
 }
@@ -25,6 +30,7 @@
   -webkit-user-drag: none;
   margin: 0;
   padding: 0;
+  font-family: "THE LEGEND OF ZELDA", "Courier New", Courier, monospace;
 }
 
 html,
@@ -34,11 +40,11 @@ body {
   height: 100%;
   font-size: 10px;
   overflow-x: hidden;
+  letter-spacing: 0.3rem;
 }
 
 /* Body Styles */
 body {
-  font-family: "Courier New", Courier, monospace;
   background-image: url("../background_img/main.jpg");
   background-size: 100% 100%;
   background-position: right;
@@ -46,12 +52,7 @@ body {
   background-attachment: fixed;
   padding: 0;
 }
-#mainContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 img {
   pointer-events: none;
   display: block;
@@ -69,7 +70,7 @@ header {
 }
 
 #gameTitleImage img {
-  width: 100vmin;
+  width: 90vmin;
 }
 
 .startGameButtonContainer {
@@ -92,11 +93,6 @@ header {
   height: 100%;
 }
 
-button:hover,
-button:active {
-  transform: scale(1.1);
-}
-
 button {
   transition: background-color 0.6s, transform 0.6s;
   border: none;
@@ -105,13 +101,18 @@ button {
   color: #111111;
 }
 
+button:hover,
+button:active {
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 769px) {
   body {
     background-image: url("../background_img/mobile.jpg");
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   html,
   body {
     font-size: 15px;

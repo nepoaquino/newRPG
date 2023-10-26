@@ -1,18 +1,23 @@
-/* Character GENDER section  */
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 100%;
+}
+
 #genderSelectText {
   display: none;
   text-align: center;
-  font-size: 4rem;
-  margin: auto 0;
-  width: 100%;
-  padding-top: 1rem;
+  font-size: 3rem;
+  margin: 20px 0;
   text-transform: uppercase;
-  color: transparent;
-  background-size: 300% 100%;
-  animation: color-change 10s ease infinite;
-  background-image: radial-gradient(circle, #ffcf76, #121308, rgb(107, 86, 50));
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: rgb(241, 231, 218);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
 #genderSelection {
@@ -25,26 +30,26 @@
 
 .characterBGimage {
   text-align: center;
-  max-width: 350px; /* Set the maximum width for consistency */
-  width: 50%; /* Use 50% of the available space for centering */
+  width: 100%;
+  max-width: 400px; /* Set the maximum width for consistency */
   background-image: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  padding: 2.5rem;
+  padding: 1.8rem;
   opacity: 0.9;
 }
 
 .character img {
   margin: 0 auto;
   max-width: 100%;
-  max-height: 180px;
+  max-height: 15rem;
 }
 
 .character-name {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   text-transform: capitalize;
   margin-top: 1rem;
@@ -65,13 +70,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 160px;
+  height: 11rem;
   max-width: 90%;
   margin: 0 auto;
 }
 
 .characterInformation p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -80,14 +85,15 @@
 }
 
 .characterGenderButton button {
-  color: transparent;
-  background-size: 100% 100%;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.characterGenderButton button span {
   background-image: radial-gradient(circle, #b38b42, rgb(40, 30, 15));
   -webkit-background-clip: text;
   background-clip: text;
-  white-space: nowrap;
-
-  width: 90%;
-  font-size: 1.4rem;
-  font-weight: 800;
+  color: transparent;
+  letter-spacing: 0.3rem;
 }
