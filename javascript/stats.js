@@ -125,9 +125,6 @@ function updateStatsView() {
       }
     });
   }
-
-  Health_Percentage();
-  Mana_Percentage();
 }
 
 // Function to handle stat modifications
@@ -162,11 +159,13 @@ function selectCharacter(vitValue, intValue, strValue, agiValue) {
 }
 
 // Save stats and toggle visibility
-function saveStatsAndToggle() {
+export function saveStatsAndToggle() {
   permanentlyAllocatedStats = { ...stats };
   statsOverview.style.display = "none";
   availablePointsElement.textContent = availablePoints;
   INITIAL_AVAILABLE_POINTS = availablePoints;
+  Health_Percentage();
+  Mana_Percentage();
   updateStatsView();
 }
 
@@ -191,9 +190,6 @@ function Health_Percentage() {
   healthElements.forEach((healthElement) => {
     healthElement.style.width = `${percentage.toFixed(0)}%`;
   });
-
-  // Update the HP percentage text
-  // HP_PercentageText.innerHTML = `${percentage.toFixed(0)}%`;
 
   HP_PercentageText.innerHTML = `${stats.currentHP} / ${permanentlyAllocatedStats.currentHP}`;
 }

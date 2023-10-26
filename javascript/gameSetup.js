@@ -1,3 +1,7 @@
+// In another module, e.g., gameSetup.js or settings.js
+import { saveStatsAndToggle } from "./stats.js";
+import { updateVolumeText } from "./settings.js";
+
 // Select elements
 const elements = {
   header: document.querySelector("header"),
@@ -21,6 +25,8 @@ const elements = {
   statsOverview: document.querySelector("#statsOverview"),
   characterProfilePicture: document.getElementById("characterProfilePicture"),
 };
+
+export let audio = elements.audio;
 
 // Initialize visibility
 elements.gameSettingsContainer.style.display = "none";
@@ -55,12 +61,29 @@ elements.selectedGenderFemale.addEventListener("click", () => {
   selectGender("female");
 });
 
+elements.statsButton.addEventListener("click", toggleStats);
+elements.settingsButton.addEventListener("click", toggleSettings);
+
+// GENDER SELECTION
+function selectGender(selectedGender) {
+  elements.genderText.innerHTML = "Select Role";
+  hide(elements.genderSection);
+  show(elements.classSection, "grid");
+  elements.warrior.src = `character/${selectedGender}/Warrior.png`;
+  elements.mage.src = `character/${selectedGender}/Mage.png`;
+  elements.assassin.src = `character/${selectedGender}/Assassin.png`;
+  elements.archer.src = `character/${selectedGender}/Archer.png`;
+  gender = selectedGender;
+}
+
+// ROLE SELECTION
 elements.selectRoleButtons.forEach((button) => {
   button.addEventListener("click", () => {
     show(elements.mainMenuContainer, "flex");
     show(elements.gameView);
     hide(elements.classSection);
     hide(elements.genderText);
+    saveStatsAndToggle();
 
     const roleToImage = {
       WarriorSelected: "Warrior.png",
@@ -77,33 +100,13 @@ elements.selectRoleButtons.forEach((button) => {
   });
 });
 
-elements.statsButton.addEventListener("click", toggleStats);
-elements.settingsButton.addEventListener("click", toggleSettings);
-
-// Functions
-function selectGender(selectedGender) {
-  elements.genderText.innerHTML = "Select Role";
-  hide(elements.genderSection);
-  show(elements.classSection, "grid");
-  elements.warrior.src = `character/${selectedGender}/Warrior.png`;
-  elements.mage.src = `character/${selectedGender}/Mage.png`;
-  elements.assassin.src = `character/${selectedGender}/Assassin.png`;
-  elements.archer.src = `character/${selectedGender}/Archer.png`;
-  gender = selectedGender;
-}
-
 function toggleStats() {
   elements.statsOverview.style.display =
     elements.statsOverview.style.display === "none" ? "block" : "none";
-  if (elements.statsOverview.style.display === "block") {
-    updateStatsView();
-  }
 }
 
 function toggleSettings() {
   elements.gameSettingsContainer.style.display =
     elements.gameSettingsContainer.style.display === "none" ? "grid" : "none";
-  if (elements.statsOverview.style.display === "grid") {
-    updateStatsView();
-  }
+  updateVolumeText();
 }
