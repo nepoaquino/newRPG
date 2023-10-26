@@ -30,18 +30,16 @@
         <audio id="bgAudio">
           <!-- MP3 format for some browsers -->
           <source src="sound/bgMusic.mp3" type="audio/mpeg" />
-          <!-- WAV format for some browsers
-          <source src="sound/bgMusic.wav" type="audio/wav" /> -->
 
           <!-- Ogg format for Firefox -->
           <source src="sound/bgMusic.ogg" type="audio/ogg" />
-
-          <!-- Fallback message for unsupported browsers -->
-          <!-- Your browser does not support the audio element. -->
         </audio>
       </div>
     </header>
 
+    <!-- <div id="gameTitleImagePage2">
+      <img src="App_Design/App_TitlePage2.png" alt="GAME TITLE" />
+    </div> -->
     <main id="mainContent">
       <!-- Character GENDER section -->
       <h2 id="genderSelectText">SELECT CHARACTER</h2>
@@ -67,7 +65,9 @@
             />
 
             <div class="characterGenderButton">
-              <button id="selectedGenderMale">TAP TO SELECT</button>
+              <button id="selectedGenderMale">
+                <span>TAP TO SELECT</span>
+              </button>
             </div>
           </div>
         </div>
@@ -93,7 +93,9 @@
             />
 
             <div class="characterGenderButton">
-              <button id="selectedGenderFemale">TAP TO SELECT</button>
+              <button id="selectedGenderFemale">
+                <span>TAP TO SELECT</span>
+              </button>
             </div>
           </div>
         </div>
@@ -111,13 +113,30 @@
           <div class="bonusStats">
             <div class="stat-row">
               <div class="stat-cell">
-                <p id="WarriorSTR">STR: 4</p>
+                <p id="WarriorSTR">
+                  <img src="icon/str.png" class="str-Icon" alt="STR ICON" />
+                  4
+                </p>
               </div>
-              <div class="stat-cell"><p id="WarriorAGI">AGI: 2</p></div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-cell"><p id="WarriorINT">INT: 1</p></div>
-              <div class="stat-cell"><p id="WarriorVIT">VIT: 3</p></div>
+              <div class="stat-cell">
+                <p id="WarriorAGI">
+                  <img src="icon/agi.png" class="agi-Icon" alt="AGI ICON" />
+                  2
+                </p>
+              </div>
+
+              <div class="stat-cell">
+                <p id="WarriorINT">
+                  <img src="icon/int.png" class="int-Icon" alt="INT ICON" />
+                  1
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p id="WarriorVIT">
+                  <img src="icon/vit.png" class="vit-Icon" alt="VIT ICON" />
+                  3
+                </p>
+              </div>
             </div>
           </div>
 
@@ -129,7 +148,7 @@
           </div>
 
           <button class="selectRoleButton" id="WarriorSelected">
-            TAP TO SELECT
+            <span>TAP TO SELECT</span>
           </button>
         </div>
 
@@ -142,12 +161,27 @@
 
           <div class="bonusStats">
             <div class="stat-row">
-              <div class="stat-cell"><p>STR: 1</p></div>
-              <div class="stat-cell"><p>AGI: 3</p></div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-cell"><p>INT: 4</p></div>
-              <div class="stat-cell"><p>VIT: 2</p></div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/str.png" class="str-Icon" alt="STR ICON" />1
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/agi.png" class="agi-Icon" alt="AGI ICON" />3
+                </p>
+              </div>
+
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/int.png" class="int-Icon" alt="INT ICON" />4
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/vit.png" class="vit-Icon" alt="VIT ICON" />2
+                </p>
+              </div>
             </div>
           </div>
           <div class="lineBorderArt">
@@ -157,7 +191,7 @@
             />
           </div>
           <button class="selectRoleButton" id="MageSelected">
-            TAP TO SELECT
+            <span>TAP TO SELECT</span>
           </button>
         </div>
 
@@ -170,12 +204,27 @@
 
           <div class="bonusStats">
             <div class="stat-row">
-              <div class="stat-cell"><p>STR: 3</p></div>
-              <div class="stat-cell"><p>AGI: 4</p></div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-cell"><p>INT: 2</p></div>
-              <div class="stat-cell"><p>VIT: 1</p></div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/str.png" class="str-Icon" alt="STR ICON" />3
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/agi.png" class="agi-Icon" alt="AGI ICON" />4
+                </p>
+              </div>
+
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/int.png" class="int-Icon" alt="INT ICON" />2
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/vit.png" class="vit-Icon" alt="VIT ICON" />1
+                </p>
+              </div>
             </div>
           </div>
           <div class="lineBorderArt">
@@ -185,7 +234,7 @@
             />
           </div>
           <button class="selectRoleButton" id="AssassinSelected">
-            TAP TO SELECT
+            <span>TAP TO SELECT</span>
           </button>
         </div>
 
@@ -198,12 +247,27 @@
 
           <div class="bonusStats">
             <div class="stat-row">
-              <div class="stat-cell"><p>STR: 1</p></div>
-              <div class="stat-cell"><p>AGI: 4</p></div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-cell"><p>INT: 3</p></div>
-              <div class="stat-cell"><p>VIT: 2</p></div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/str.png" class="str-Icon" alt="STR ICON" />1
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/agi.png" class="agi-Icon" alt="AGI ICON" />4
+                </p>
+              </div>
+
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/int.png" class="int-Icon" alt="INT ICON" />3
+                </p>
+              </div>
+              <div class="stat-cell">
+                <p>
+                  <img src="icon/vit.png" class="vit-Icon" alt="VIT ICON" />2
+                </p>
+              </div>
             </div>
           </div>
           <div class="lineBorderArt">
@@ -213,188 +277,186 @@
             />
           </div>
           <button class="selectRoleButton" id="ArcherSelected">
-            TAP TO SELECT
+            <span>TAP TO SELECT</span>
           </button>
         </div>
       </div>
-
-      <div id="gameView">
-        <div id="mainMenuContainer" class="menu">
-          <button id="statsButton" class="menu-button">Stats</button>
-          <button id="itemShop" class="menu-button">Skills</button>
-          <!-- <button id="equipment" class="menu-button">Equipment</button> -->
-          <button id="itemButton" class="menu-button">Inventory</button>
-          <button id="settingsButton" class="menu-button">Settings</button>
-        </div>
-
-        <div id="gameOverview">
-          <!-- Main Menu Buttons -->
-
-          <div id="characterImageContainer">
-            <!-- CHANGE THIS IMAGE dynamically -->
-            <img src="" alt="profilePicture" id="characterProfilePicture" />
-          </div>
-
-          <div id="labels">
-            <p>HP</p>
-            <p>MP</p>
-            <p>EXP</p>
-          </div>
-          <div id="characterInfoTextsContainer">
-            <div class="bar">
-              <div class="health">
-                <span id="HP_Percentage">0</span>
-              </div>
-            </div>
-
-            <div class="bar">
-              <div class="mana">
-                <span id="MP_Percentage">0</span>
-              </div>
-            </div>
-
-            <div class="bar">
-              <div class="experience">
-                <span id="EXP_Percentage">50 / 100</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="storyDiv">
-          <div id="storyChapter">
-            <h3>INTRODUCTION</h3>
-          </div>
-          <div id="storyParagraphContainer">
-            <p class="storyParagraph">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
-            </p>
-            <p class="storyParagraph">
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p class="storyParagraph">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum."
-            </p>
-          </div>
-
-          <div id="gameMenuButtons">
-            <button>FIGHT</button>
-            <button>RUN</button>
-            <button>ETC</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats overview section -->
-      <div id="statsOverview">
-        <h2>CHARACTER STATS</h2>
-
-        <div id="statsView">
-          <ul>
-            <li>
-              Health:
-              <span class="stat-value" id="currentHP">100</span
-              ><span class="stat-value" id="permanentHP">100</span>
-            </li>
-            <li>
-              Physical-Dmg:<span class="stat-value" id="physicalDmg">0</span>
-            </li>
-            <li>
-              Mana:
-              <span class="stat-value" id="currentMP">100</span
-              ><span class="stat-value" id="permanentMP">100</span>
-            </li>
-            <li>Magic-Dmg:<span class="stat-value" id="magicDmg">0</span></li>
-            <li>Hit-Rate:<span class="stat-value" id="hitRate">0</span></li>
-            <li>
-              Physical-Def:<span class="stat-value" id="physicalDef">0</span>
-            </li>
-            <li>Evasion:<span class="stat-value" id="evasion">0</span></li>
-            <li>Magic-Def:<span class="stat-value" id="magicDef">0</span></li>
-            <li>Block-Rate:<span class="stat-value" id="blockRate">0</span></li>
-            <li>Crit-Rate:<span class="stat-value" id="critRate">0</span></li>
-            <li>
-              Resistance:<span class="stat-value" id="resistance">0</span>
-            </li>
-            <li>Crit-Dmg:<span class="stat-value" id="critDmg">0</span></li>
-          </ul>
-        </div>
-
-        <!-- Stat modifiers section -->
-        <div id="statModifiers">
-          <ul>
-            <li>
-              STR:<span id="strValue">0</span>
-              <div class="buttons">
-                <button class="plusButton" data-stat="str">+</button>
-                <button class="minusButton" data-stat="str">-</button>
-              </div>
-            </li>
-            <li>
-              AGI:<span id="agiValue">0</span>
-              <div class="buttons">
-                <button class="plusButton" data-stat="agi">+</button>
-                <button class="minusButton" data-stat="agi">-</button>
-              </div>
-            </li>
-
-            <li>
-              INT:<span id="intValue">0</span>
-              <div class="buttons">
-                <button class="plusButton" data-stat="int">+</button>
-                <button class="minusButton" data-stat="int">-</button>
-              </div>
-            </li>
-
-            <li>
-              VIT:<span id="vitValue">0</span>
-              <div class="buttons">
-                <button class="plusButton" data-stat="vit">+</button>
-                <button class="minusButton" data-stat="vit">-</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <p id="availablePointsText">
-          Available Points: <span id="availablePointsValue">5</span>
-        </p>
-        <button id="statsConfirm">CONFIRM</button>
-        <button id="statsCancel">CANCEL</button>
-      </div>
-
-      <!-- GAME SETTINGS SECTION -->
-      <div id="gameSettingsContainer">
-        <h2>SETTINGS</h2>
-        <div id="homeSettings">
-          <button>HOME</button>
-          <button id="resumeButton">RESUME</button>
-        </div>
-
-        <div id="centeredButtons">
-          <div class="setting">
-            <p>Text Size</p>
-            <button id="increaseTextSizeButton">+</button>
-            <p id="fontSizeText">10</p>
-            <button id="decreaseTextSizeButton">-</button>
-          </div>
-
-          <div class="setting">
-            <p>Volume</p>
-            <button id="volumeUP">+</button>
-            <p id="volumePercentage">0%</p>
-            <button id="VolumeDOWN">-</button>
-          </div>
-        </div>
-        <div id="confirmSettingsContainer">
-          <button id="confirmSettingsButton">CONFIRM</button>
-        </div>
-      </div>
+      <!-- END OF - Character Class Section -->
     </main>
+    <!-- asdasdasdasdasdasd -->
+    <div id="gameView">
+      <div id="mainMenuContainer" class="menu">
+        <button id="statsButton" class="menu-button">Stats</button>
+        <button id="itemShop" class="menu-button">Skills</button>
+        <!-- <button id="equipment" class="menu-button">Equipment</button> -->
+        <button id="itemButton" class="menu-button">Inventory</button>
+        <button id="settingsButton" class="menu-button">Settings</button>
+      </div>
+
+      <div id="gameOverview">
+        <!-- Main Menu Buttons -->
+
+        <div id="characterImageContainer">
+          <!-- CHANGE THIS IMAGE dynamically -->
+          <img src="" alt="profilePicture" id="characterProfilePicture" />
+        </div>
+
+        <div id="labels">
+          <p>HP</p>
+          <p>MP</p>
+          <p>EXP</p>
+        </div>
+        <div id="characterInfoTextsContainer">
+          <div class="bar">
+            <div class="health">
+              <span id="HP_Percentage">0</span>
+            </div>
+          </div>
+
+          <div class="bar">
+            <div class="mana">
+              <span id="MP_Percentage">0</span>
+            </div>
+          </div>
+
+          <div class="bar">
+            <div class="experience">
+              <span id="EXP_Percentage">50 / 100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="storyDiv">
+        <div id="storyChapter">
+          <h3>INTRODUCTION</h3>
+        </div>
+        <div id="storyParagraphContainer">
+          <p class="storyParagraph">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam,
+          </p>
+          <p class="storyParagraph">
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <p class="storyParagraph">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+
+        <div id="gameMenuButtons">
+          <button>FIGHT</button>
+          <button>RUN</button>
+          <button>ETC</button>
+        </div>
+      </div>
+    </div>
+    <!-- Stats overview section -->
+    <div id="statsOverview">
+      <h2>CHARACTER STATS</h2>
+
+      <div id="statsView">
+        <ul>
+          <li>
+            Health:
+            <span class="stat-value" id="currentHP">100</span
+            ><span class="stat-value" id="permanentHP">100</span>
+          </li>
+          <li>
+            Physical-Dmg:<span class="stat-value" id="physicalDmg">0</span>
+          </li>
+          <li>
+            Mana:
+            <span class="stat-value" id="currentMP">100</span
+            ><span class="stat-value" id="permanentMP">100</span>
+          </li>
+          <li>Magic-Dmg:<span class="stat-value" id="magicDmg">0</span></li>
+          <li>Hit-Rate:<span class="stat-value" id="hitRate">0</span></li>
+          <li>
+            Physical-Def:<span class="stat-value" id="physicalDef">0</span>
+          </li>
+          <li>Evasion:<span class="stat-value" id="evasion">0</span></li>
+          <li>Magic-Def:<span class="stat-value" id="magicDef">0</span></li>
+          <li>Block-Rate:<span class="stat-value" id="blockRate">0</span></li>
+          <li>Crit-Rate:<span class="stat-value" id="critRate">0</span></li>
+          <li>Resistance:<span class="stat-value" id="resistance">0</span></li>
+          <li>Crit-Dmg:<span class="stat-value" id="critDmg">0</span></li>
+        </ul>
+      </div>
+
+      <!-- Stat modifiers section -->
+      <div id="statModifiers">
+        <ul>
+          <li>
+            STR:<span id="strValue">0</span>
+            <div class="buttons">
+              <button class="plusButton" data-stat="str">+</button>
+              <button class="minusButton" data-stat="str">-</button>
+            </div>
+          </li>
+          <li>
+            AGI:<span id="agiValue">0</span>
+            <div class="buttons">
+              <button class="plusButton" data-stat="agi">+</button>
+              <button class="minusButton" data-stat="agi">-</button>
+            </div>
+          </li>
+
+          <li>
+            INT:<span id="intValue">0</span>
+            <div class="buttons">
+              <button class="plusButton" data-stat="int">+</button>
+              <button class="minusButton" data-stat="int">-</button>
+            </div>
+          </li>
+
+          <li>
+            VIT:<span id="vitValue">0</span>
+            <div class="buttons">
+              <button class="plusButton" data-stat="vit">+</button>
+              <button class="minusButton" data-stat="vit">-</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <p id="availablePointsText">
+        Available Points: <span id="availablePointsValue">5</span>
+      </p>
+      <button id="statsConfirm">CONFIRM</button>
+      <button id="statsCancel">CANCEL</button>
+    </div>
+
+    <!-- GAME SETTINGS SECTION -->
+    <div id="gameSettingsContainer">
+      <h2>SETTINGS</h2>
+      <div id="homeSettings">
+        <button>HOME</button>
+        <button id="resumeButton">RESUME</button>
+      </div>
+
+      <div id="centeredButtons">
+        <div class="setting">
+          <p>Text Size</p>
+          <button id="increaseTextSizeButton">+</button>
+          <p id="fontSizeText">10</p>
+          <button id="decreaseTextSizeButton">-</button>
+        </div>
+
+        <div class="setting">
+          <p>Volume</p>
+          <button id="volumeUP">+</button>
+          <p id="volumePercentage">0%</p>
+          <button id="VolumeDOWN">-</button>
+        </div>
+      </div>
+      <div id="confirmSettingsContainer">
+        <button id="confirmSettingsButton">CONFIRM</button>
+      </div>
+    </div>
 
     <script type="module" src="javascript/stats.js"></script>
     <script type="module" src="javascript/settings.js"></script>
