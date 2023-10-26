@@ -1,6 +1,6 @@
 /* Character Class Section */
 #characterClass {
-  display: none;
+  display: none; /* None or GRID */
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-content: center;
@@ -13,9 +13,11 @@
   background: url("../App_Design/Select_Gender/App_design_Gender_Paper_BG.png")
     center no-repeat;
   background-size: 100% 100%;
+  width: auto;
   height: auto;
   padding-bottom: 2rem;
   opacity: 0.9;
+  border: solid red;
 }
 
 .characterRoleImage {
@@ -33,7 +35,7 @@
 
 .charClass h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
   display: block;
@@ -47,6 +49,7 @@
   background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
+  white-space: nowrap;
 }
 
 .charClass .bonusStats {
@@ -88,7 +91,8 @@
   letter-spacing: 0.3rem;
   background-color: transparent;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  white-space: nowrap;
 }
 
 .stat-cell img {
@@ -96,7 +100,7 @@
   height: 4rem;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 780px) {
   #characterClass {
     grid-template-columns: repeat(4, 1fr);
   }
