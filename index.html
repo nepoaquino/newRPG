@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/classRole.css" />
     <link rel="stylesheet" href="css/mainMenu.css" />
     <link rel="stylesheet" href="css/stats.css" />
+    <link rel="stylesheet" href="css/settings.css" />
   </head>
 
   <body>
@@ -23,6 +24,21 @@
         <a id="startGameButton">
           <img src="svg/tap_to_start.svg" alt="Start Button" />
         </a>
+      </div>
+
+      <div id="backgroundMusic">
+        <audio id="bgAudio">
+          <!-- MP3 format for some browsers -->
+          <source src="sound/bgMusic.mp3" type="audio/mpeg" />
+          <!-- WAV format for some browsers
+          <source src="sound/bgMusic.wav" type="audio/wav" /> -->
+
+          <!-- Ogg format for Firefox -->
+          <source src="sound/bgMusic.ogg" type="audio/ogg" />
+
+          <!-- Fallback message for unsupported browsers -->
+          <!-- Your browser does not support the audio element. -->
+        </audio>
       </div>
     </header>
 
@@ -349,6 +365,30 @@
         </p>
         <button id="statsConfirm">CONFIRM</button>
         <button id="statsCancel">CANCEL</button>
+      </div>
+
+      <!-- GAME SETTINGS SECTION -->
+      <div id="gameSettingsContainer">
+        <h2>GAME SETTINGS</h2>
+        <div id="homeSettings">
+          <button>HOME</button>
+        </div>
+
+        <div id="centeredButtons">
+          <div class="setting">
+            <p>Font Size</p>
+            <button>+</button>
+            <p id="fontSizeText">10</p>
+            <button>-</button>
+          </div>
+
+          <div class="setting">
+            <p>SOUND</p>
+            <button id="volumeUP">+</button>
+            <p id="volumePercentage">100%</p>
+            <button id="VolumeDOWN">-</button>
+          </div>
+        </div>
       </div>
     </main>
 
