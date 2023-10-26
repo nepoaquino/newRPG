@@ -369,30 +369,35 @@
 
       <!-- GAME SETTINGS SECTION -->
       <div id="gameSettingsContainer">
-        <h2>GAME SETTINGS</h2>
+        <h2>SETTINGS</h2>
         <div id="homeSettings">
           <button>HOME</button>
+          <button id="resumeButton">RESUME</button>
         </div>
 
         <div id="centeredButtons">
           <div class="setting">
-            <p>Font Size</p>
-            <button>+</button>
+            <p>Text Size</p>
+            <button id="increaseTextSizeButton">+</button>
             <p id="fontSizeText">10</p>
-            <button>-</button>
+            <button id="decreaseTextSizeButton">-</button>
           </div>
 
           <div class="setting">
-            <p>SOUND</p>
+            <p>Volume</p>
             <button id="volumeUP">+</button>
-            <p id="volumePercentage">100%</p>
+            <p id="volumePercentage">0%</p>
             <button id="VolumeDOWN">-</button>
           </div>
+        </div>
+        <div id="confirmSettingsContainer">
+          <button id="confirmSettingsButton">CONFIRM</button>
         </div>
       </div>
     </main>
 
-    <script src="javascript/stats.js"></script>
-    <script src="javascript/gameSetup.js"></script>
+    <script type="module" src="javascript/stats.js"></script>
+    <script type="module" src="javascript/settings.js"></script>
+    <script type="module" src="javascript/gameSetup.js"></script>
   </body>
 </html>
