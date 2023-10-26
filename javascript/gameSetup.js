@@ -67,6 +67,7 @@ elements.settingsButton.addEventListener("click", toggleSettings);
 // GENDER SELECTION
 function selectGender(selectedGender) {
   elements.genderText.innerHTML = "Select Role";
+  elements.genderText.style.margin = "10px 0";
   hide(elements.genderSection);
   show(elements.classSection, "grid");
   elements.warrior.src = `character/${selectedGender}/Warrior.png`;
