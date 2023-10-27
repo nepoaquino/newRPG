@@ -1,5 +1,6 @@
 /* GAME SETTINGS CONTAINER */
 #gameSettingsContainer {
+  font-family: "Times New Roman", Times, serif;
   display: none; /*GRID OR NONE */
   grid-template-rows: auto;
   gap: 1.5rem;
@@ -13,7 +14,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   z-index: 999;
   align-items: center;
   justify-content: center;
@@ -78,6 +79,6 @@
 }
 
 #centeredButtons p {
-  width: 10rem;
+  width: 13rem;
   border: 1px solid rgba(154, 154, 154, 0.325);
 }

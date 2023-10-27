@@ -37,7 +37,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  padding: 1.8rem;
+  padding: 2rem;
   opacity: 0.9;
 }
 
@@ -91,6 +91,8 @@
 }
 
 .characterGenderButton button span {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
   background-image: radial-gradient(circle, #b38b42, rgb(40, 30, 15));
   -webkit-background-clip: text;
   background-clip: text;
