@@ -1,7 +1,7 @@
 #gameView {
   display: none;
   margin: 0 auto;
-  width: 700px;
+  width: 1000px;
   max-width: 99%;
   z-index: 1;
 }
@@ -153,8 +153,8 @@
   align-items: center;
   position: sticky;
   margin: 1rem auto;
-  height: 500px; /* Set a fixed height (adjust this value as needed) */
-  max-height: 100%; /* To ensure it doesn't exceed the parent's height */
+  height: 100%; /* Set a fixed height (adjust this value as needed) */
+  max-height: 600px; /* To ensure it doesn't exceed the parent's height */
   background-image: url("../App_Design/Select_Gender/paperStoryBackground.jpg");
   background-size: 100% 100%;
   background-position: center;

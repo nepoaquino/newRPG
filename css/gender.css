@@ -37,12 +37,12 @@
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   opacity: 0.9;
 }
 
 .character img {
-  margin: 0 auto;
+  margin: 5px auto;
   max-width: 100%;
   max-height: 15rem;
 }
