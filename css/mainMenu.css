@@ -162,7 +162,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   border: 1px solid black;
   padding-bottom: 1rem;
-  overflow-y: scroll; /* Add scroll for vertical overflow */
+  overflow-y: auto; /* Add scroll for vertical overflow */
 }
 
 #storyDiv h3 {
