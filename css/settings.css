@@ -75,10 +75,10 @@
   gap: 1.5rem;
   font-weight: bold;
   margin: 2rem 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #centeredButtons p {
-  width: 13rem;
+  width: 12rem;
   border: 1px solid rgba(154, 154, 154, 0.325);
 }
