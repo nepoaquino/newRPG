@@ -1,84 +1,90 @@
 /* GAME SETTINGS CONTAINER */
 #gameSettingsContainer {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #333333f5;
+  color: #efefef;
   font-family: "Times New Roman", Times, serif;
-  display: none; /*GRID OR NONE */
-  grid-template-rows: auto;
-  gap: 1.5rem;
+  display: block; /*GRID OR NONE */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #333333f0;
-  color: #efefef;
-  border: 1px solid rgba(17, 17, 17, 0.94); /* Slightly transparent border */
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 90%;
-  max-width: 600px;
+  width: 95%;
+  max-width: 650px;
   z-index: 999;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif; /* Add a default font family */
-  padding-bottom: 2rem;
+  padding: 20px;
 }
 
-/* GAME SETTINGS TITLE */
 #gameSettingsContainer h2 {
   font-size: 2.5rem;
-  font-weight: bold; /* Bolder font weight */
-  padding: 1.5rem 0;
+  font-weight: bolder;
   text-transform: uppercase;
-  background: linear-gradient(to right, #ffcf76, #3e2e18, rgb(107, 86, 50));
+  color: transparent;
+  background-size: 300% 100%;
+  animation: color-change 5s ease infinite;
+  background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   white-space: nowrap;
-  animation: color-change 4s ease infinite;
-  background-size: 1000% 100%;
-}
-
-/* GAME SETTINGS BUTTONS */
-#gameSettingsContainer button {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  background-color: #666;
-  color: #efefefef;
-  border: none;
-  cursor: pointer; /* Add a pointer cursor to buttons */
-}
-
-#gameSettingsContainer button:hover,
-#gameSettingsContainer button:active {
-  background-color: #ffcf76;
-  color: black;
 }
 
 #homeSettings {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 1.5rem;
+  margin: 20px 0 15px 0;
+}
+#homeSettings button,
+#centeredButtons button {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 7.5px 15px;
+  background-color: #666;
+  color: #efefefef;
+  border: none;
+  cursor: pointer;
 }
 
-/* HOME BUTTON, RESUME */
-#homeSettings button {
-  width: 30%;
+#centeredButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* SETTINGS (Font Size and Sound) */
 .setting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+.setting button {
+  margin-left: 10px;
+}
+
+.setting p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  font-weight: bold;
-  margin: 2rem 0;
   font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
 }
 
-#centeredButtons p {
-  width: 12rem;
-  border: 1px solid rgba(154, 154, 154, 0.325);
+#fontSizeText,
+#volumePercentage {
+  border: solid #efefef55;
+}
+
+#confirmSettingsContainer button {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 7.5px 15px;
+  background-color: #666;
+  color: #efefefef;
+  border: none;
+  cursor: pointer;
 }

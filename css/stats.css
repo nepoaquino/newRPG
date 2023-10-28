@@ -5,7 +5,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #333333f0;
+  background-color: #333333f5;
   color: #efefefef;
   border: 1px solid #111111f0;
   text-align: center;
@@ -13,15 +13,13 @@
   width: 95%;
   max-width: 650px;
   z-index: 999;
-  padding-bottom: 5px;
+  padding: 20px;
 }
 
 #statsOverview h2 {
   font-size: 2.5rem;
   font-weight: bolder;
-  padding: 1.5rem 0;
   text-transform: uppercase;
-
   color: transparent;
   background-size: 300% 100%;
   animation: color-change 5s ease infinite;
@@ -29,6 +27,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 #statsView {
@@ -36,7 +35,7 @@
 }
 
 #statsView ul {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   list-style: none;
@@ -63,11 +62,13 @@
 
 #statModifiers .buttons button {
   font-size: 1.5rem;
-  padding: 0.5rem 2rem;
+  padding: 7.5px 15px;
   background-color: #666;
   color: #efefefef;
   border: none;
   cursor: pointer;
+
+  margin-left: 5px;
 }
 
 #statModifiers .buttons button:hover,
@@ -95,7 +96,7 @@
 #statsCancel {
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 7.5px 15px;
   background-color: #666;
   color: #efefefef;
   border: none;
