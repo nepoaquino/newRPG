@@ -88,11 +88,13 @@ volumeDOWN.addEventListener("click", () => {
 });
 
 const confirmSettingsButton = document.querySelector("#confirmSettingsButton");
+
+confirmSettingsButton.addEventListener("click", closeSettingsMenu);
+
 const resumeButton = document.querySelector("#resumeButton");
 
 function closeSettingsMenu() {
   gameSettingsContainer.style.display = "none";
 } // CONFIRM AND CLOSE THE SETTINGS MENU
 
-confirmSettingsButton.addEventListener("click", closeSettingsMenu);
 resumeButton.addEventListener("click", closeSettingsMenu);
