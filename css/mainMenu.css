@@ -151,17 +151,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
-  margin: 1rem auto;
+  margin: 10px auto;
   height: 100%; /* Set a fixed height (adjust this value as needed) */
-  max-height: 600px; /* To ensure it doesn't exceed the parent's height */
+  max-height: 800px; /* To ensure it doesn't exceed the parent's height */
   background-image: url("../App_Design/Select_Gender/paperStoryBackground.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   font-family: Georgia, "Times New Roman", Times, serif;
-  border: 1px solid black;
-  padding-bottom: 1rem;
+
+  padding-bottom: 5em;
   overflow-y: auto; /* Add scroll for vertical overflow */
 }
 
@@ -186,9 +185,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  margin: 0.5rem 3rem;
-  line-height: 1.5;
+  gap: 2em;
+  margin: 0.5em 1.5em;
+  line-height: 1.6;
   font-size: 1.5rem;
 }
 

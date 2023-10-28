@@ -1,12 +1,11 @@
 #mainContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  top: 30%;
+  margin: 0 auto;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -50%);
   width: 100%;
 }
 
@@ -22,13 +21,15 @@
 
 #genderSelection {
   display: none;
-  flex-wrap: nowrap;
   justify-content: center;
   height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 
 .characterBGimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   width: 100%;
   max-width: 400px; /* Set the maximum width for consistency */
@@ -36,19 +37,16 @@
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: auto;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 0;
   opacity: 0.9;
 }
 
 .character img {
   margin: 5px auto;
-  max-width: 100%;
-  max-height: 15rem;
+  max-width: 80%;
 }
 
 .character-name {
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.8rem;
   font-weight: 800;
   text-transform: capitalize;
@@ -59,35 +57,26 @@
   background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
   -webkit-background-clip: text;
   background-clip: text;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .characterInformation {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 11rem;
-  max-width: 90%;
-  margin: 0 auto;
+  margin: 1em 2em;
+  height: 110px;
 }
 
 .characterInformation p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: center;
-}
-
-.characterGenderButton {
-  margin: auto;
 }
 
 .characterGenderButton button {
   background-color: transparent;
   width: 100%;
-  font-size: 1.5rem;
+  margin: auto;
+  font-size: 1.3rem;
 }
 
 .characterGenderButton button span {
