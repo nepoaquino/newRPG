@@ -1,5 +1,6 @@
 /* GAME SETTINGS CONTAINER */
 #gameSettingsContainer {
+  display: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: #333333f5;
   color: #efefef;
@@ -11,9 +12,9 @@
   transform: translate(-50%, -50%);
   text-align: center;
   width: 95%;
-  max-width: 650px;
+  max-width: 500px;
   z-index: 999;
-  padding: 20px;
+  padding: 30px;
 }
 
 #gameSettingsContainer h2 {
@@ -30,17 +31,21 @@
 }
 
 #homeSettings {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  margin: 20px 0 15px 0;
+  margin: 30px 0;
+  gap: 40px;
 }
+
 #homeSettings button,
 #centeredButtons button {
   font-weight: bold;
   font-size: 1.5rem;
   padding: 7.5px 15px;
+
   background-color: #666;
   color: #efefefef;
   border: none;
@@ -56,12 +61,9 @@
 .setting {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 5px 0;
-}
-.setting button {
-  margin-left: 10px;
+  margin: 10px 0;
 }
 
 .setting p {
@@ -69,17 +71,20 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 
 #fontSizeText,
 #volumePercentage {
-  border: solid #efefef55;
+  width: 50%;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: solid #ffffff30;
 }
 
 #confirmSettingsContainer button {
-  margin-top: 20px;
+  margin-top: 50px;
   font-weight: bold;
   font-size: 1.5rem;
   padding: 7.5px 15px;
