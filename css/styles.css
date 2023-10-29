@@ -58,6 +58,10 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   display: block; /* TOGGLE NONE or BLOCK */
 }
