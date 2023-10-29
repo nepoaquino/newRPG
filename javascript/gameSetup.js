@@ -23,14 +23,23 @@ const elements = {
   gameSettingsContainer: document.querySelector("#gameSettingsContainer"),
   statsButton: document.querySelector("#statsButton"),
   statsOverview: document.querySelector("#statsOverview"),
+  skillsButton: document.querySelector("#skillsButton"),
+  CharacterSkillsList: document.querySelector("#CharacterSkillsList"),
+
   characterProfilePicture: document.getElementById("characterProfilePicture"),
 };
-
 export let audio = elements.audio;
+
+// TOGGLE BUTTONS
+elements.statsButton.addEventListener("click", toggleStats); //STATS BUTTON
+elements.skillsButton.addEventListener("click", toggleSkills); //SKILL BUTTON
+elements.settingsButton.addEventListener("click", toggleSettings); //SETTINGS BUTTON
 
 // Initialize visibility
 elements.gameSettingsContainer.style.display = "none";
+elements.CharacterSkillsList.style.display = "none";
 elements.statsOverview.style.display = "none";
+
 let gender = "";
 let selectedCharacterRoles = "";
 
@@ -60,9 +69,6 @@ elements.selectedGenderMale.addEventListener("click", () => {
 elements.selectedGenderFemale.addEventListener("click", () => {
   selectGender("female");
 });
-
-elements.statsButton.addEventListener("click", toggleStats);
-elements.settingsButton.addEventListener("click", toggleSettings);
 
 // GENDER SELECTION
 function selectGender(selectedGender) {
@@ -106,8 +112,13 @@ function toggleStats() {
     elements.statsOverview.style.display === "none" ? "block" : "none";
 }
 
+function toggleSkills() {
+  elements.CharacterSkillsList.style.display =
+    elements.CharacterSkillsList.style.display === "none" ? "block" : "none";
+}
+
 function toggleSettings() {
   elements.gameSettingsContainer.style.display =
-    elements.gameSettingsContainer.style.display === "none" ? "grid" : "none";
+    elements.gameSettingsContainer.style.display === "none" ? "block" : "none";
   updateVolumeText();
 }
