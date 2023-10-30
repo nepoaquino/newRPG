@@ -82,11 +82,11 @@
 }
 
 .charClass button {
+  letter-spacing: 0.3rem;
   background-image: radial-gradient(circle, #b38b42, rgb(40, 30, 15));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  letter-spacing: 0.3rem;
   background-color: transparent;
   width: 100%;
   font-size: 1.3rem;
