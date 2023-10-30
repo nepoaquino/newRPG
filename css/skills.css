@@ -11,7 +11,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 95%;
   height: auto;
-  max-height: 600px;
+
   max-width: 650px;
   z-index: 996;
   padding: 20px 10px;
@@ -32,41 +32,23 @@
   white-space: nowrap;
   margin-bottom: 30px;
 }
-#skillType {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-  gap: 30px;
-}
-
-#skillType > button {
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding: 7.5px 15px;
-  background-color: #666;
-  color: #efefefef;
-  border: none;
-  cursor: pointer;
-}
-
-#offensiveSkills {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
 
 .skill {
-  border: solid red;
+  border: solid rgba(255, 0, 0, 0.307);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
+}
+
+#skillList {
+  border: solid green;
 }
 
 .skill p {
   font-size: 1.5rem;
+  border: solid blue;
 }
 
 .skill button {
