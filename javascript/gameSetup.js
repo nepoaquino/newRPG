@@ -25,7 +25,6 @@ const elements = {
   statsOverview: document.querySelector("#statsOverview"),
   skillsButton: document.querySelector("#skillsButton"),
   CharacterSkillsList: document.querySelector("#CharacterSkillsList"),
-
   characterProfilePicture: document.getElementById("characterProfilePicture"),
 };
 export let audio = elements.audio;
@@ -40,8 +39,8 @@ elements.gameSettingsContainer.style.display = "none";
 elements.CharacterSkillsList.style.display = "none";
 elements.statsOverview.style.display = "none";
 
-let gender = "";
-let selectedCharacterRoles = "";
+export let gender = "";
+export let selectedCharacterRoles = "";
 
 // Function to hide something
 function hide(element) {
@@ -93,17 +92,17 @@ elements.selectRoleButtons.forEach((button) => {
     saveStatsAndToggle();
 
     const roleToImage = {
-      WarriorSelected: "Warrior.png",
-      MageSelected: "Mage.png",
-      AssassinSelected: "Assassin.png",
-      ArcherSelected: "Archer.png",
+      WarriorSelected: "Warrior",
+      MageSelected: "Mage",
+      AssassinSelected: "Assassin",
+      ArcherSelected: "Archer",
     };
 
     if (roleToImage.hasOwnProperty(button.id)) {
       selectedCharacterRoles = roleToImage[button.id];
     }
 
-    elements.characterProfilePicture.src = `character/${gender}/${selectedCharacterRoles}`;
+    elements.characterProfilePicture.src = `character/${gender}/${selectedCharacterRoles}.png`;
   });
 });
 
