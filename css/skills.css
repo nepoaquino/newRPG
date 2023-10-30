@@ -2,9 +2,9 @@
   font-family: "Times New Roman", Times, serif;
   display: none; /*NONE OR BLOCK */
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   background-color: #333333f5;
   color: #efefefef;
   border: 1px solid #111111f0;
@@ -13,7 +13,7 @@
   height: auto;
   max-height: 600px;
   max-width: 650px;
-  z-index: 999;
+  z-index: 996;
   padding: 20px 10px;
   overflow-y: auto;
 }
@@ -30,10 +30,27 @@
   -webkit-background-clip: text;
   background-clip: text;
   white-space: nowrap;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+#skillType {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 30px;
 }
 
-/* Add this CSS for the skills and labels inside offensiveSkills */
+#skillType > button {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 7.5px 15px;
+  background-color: #666;
+  color: #efefefef;
+  border: none;
+  cursor: pointer;
+}
+
 #offensiveSkills {
   display: flex;
   flex-direction: column;
