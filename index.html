@@ -463,79 +463,73 @@
 
     <!-- Character Skills Section -->
     <div id="CharacterSkillsList">
-      <h2>Skill Lists</h2>
+      <h2>Skills Lists</h2>
 
       <div id="skillList">
-        <h3>Cleave</h3>
+        <h3 id="skillName1"></h3>
         <div class="skill">
           <button>
-            <img src="icon/skills/warrior/cleave.PNG" alt="Agility" />
+            <img id="imageSkill1" src="" alt="first skill" />
           </button>
           <div class="description">
-            <p>
-              (Mana Cost: 15, Cooldown: 2 turns) The warrior delivers a
-              powerful, sweeping attack to enemy dealing (20 + 50% Total STR)
-              Physical Damage.
-            </p>
+            <p id="skillDescription1"></p>
+            <p id="manaCost1"></p>
+            <p id="cooldown1"></p>
           </div>
         </div>
-        <h3>Crushing Blow</h3>
+
+        <h3 id="skillName2"></h3>
         <div class="skill">
           <button>
-            <img src="icon/skills/warrior/skill.PNG" alt="Agility" />
+            <img id="imageSkill2" src="" alt="second skill" />
           </button>
           <div class="description">
-            <p>
-              (Mana Cost: 20, Cooldown: 3 turns): The warrior strikes an
-              opponent with immense force, dealing (30 + 100% Total STR)
-              Physical Damage. This attack also has a 50% chance to stun the
-              opponent for 1 turn.
-            </p>
+            <p id="skillDescription2"></p>
+            <p id="manaCost2"></p>
+            <p id="cooldown2"></p>
           </div>
         </div>
-        <h3>Raging Frenzy</h3>
+
+        <h3 id="skillName3"></h3>
         <div class="skill">
           <button>
-            <img src="icon/skills/warrior/rage.PNG" alt="Agility" />
+            <img id="imageSkill3" src="" alt="third skill" />
           </button>
           <div class="description">
-            <p>
-              (Mana Cost: 20, Cooldown: 3 turns): The warrior enters a state of
-              pure rage, increasing their Total Attack Damage by 30% for 3
-              turns.
-            </p>
+            <p id="skillDescription3"></p>
+            <p id="manaCost3"></p>
+            <p id="cooldown3"></p>
           </div>
         </div>
-        <h3>Mend Wounds</h3>
+
+        <h3 id="skillName4"></h3>
         <div class="skill">
           <button>
-            <img src="icon/skills/warrior/heal.PNG" alt="Agility" />
+            <img id="imageSkill4" src="" alt="fourth skill" />
           </button>
           <div class="description">
-            <p>
-              (Mana Cost: 25, Cooldown: 5 turns): Restores 30% of the warrior's
-              health, allowing them to recover during battles.
-            </p>
+            <p id="skillDescription4"></p>
+            <p id="manaCost4"></p>
+            <p id="cooldown4"></p>
           </div>
         </div>
-        <h3>Defensive Stance</h3>
+
+        <h3 id="skillName5"></h3>
         <div class="skill">
           <button>
-            <img src="icon/skills/warrior/defensive.PNG" alt="Agility" />
+            <img id="imageSkill5" src="" alt="fifth skill" />
           </button>
           <div class="description">
-            <p>
-              (Mana Cost: 20, Cooldown: 4 turns): Boosts the warrior's defenses
-              for 50% in 3 turns while reducing their damage output by 50% for
-              the same duration.
-            </p>
+            <p id="skillDescription5"></p>
+            <p id="manaCost5"></p>
+            <p id="cooldown5"></p>
           </div>
         </div>
       </div>
     </div>
-
+    <script type="module" src="javascript/gameSetup.js"></script>
     <script type="module" src="javascript/stats.js"></script>
     <script type="module" src="javascript/settings.js"></script>
-    <script type="module" src="javascript/gameSetup.js"></script>
+    <script type="module" src="javascript/skill.js"></script>
   </body>
 </html>
