@@ -75,39 +75,44 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
 //MAGE SKILLS LIST
 document.getElementById("MageSelected").addEventListener("click", () => {
   // First Skill Properties
-  skillName1.innerHTML = "lorem ipsum";
-  imageSkill1.src = "lorem ipsum";
-  skillDescription1.innerHTML = "lorem ipsum";
-  manaCost1.innerHTML = "lorem ipsum";
-  cooldown1.innerHTML = "lorem ipsum";
+  skillName1.innerHTML = "Fireball";
+  imageSkill1.src = "icon/skills/mage/fireball.PNG";
+  skillDescription1.innerHTML =
+    "The mage hurls a searing fireball at the enemy, dealing (25 + 60% Total INT) Magic Damage.";
+  manaCost1.innerHTML = "Mana Cost: 20";
+  cooldown1.innerHTML = "Cooldown: 2 Turns";
 
   // Second Skill Properties
-  skillName2.innerHTML = "lorem ipsum";
-  imageSkill2.src = "lorem ipsum";
-  skillDescription2.innerHTML = "lorem ipsum";
-  manaCost2.innerHTML = "lorem ipsum";
-  cooldown2.innerHTML = "lorem ipsum";
+  skillName2.innerHTML = "Frosbite";
+  imageSkill2.src = "icon/skills/mage/frostbite.PNG";
+  skillDescription2.innerHTML =
+    "Encases an enemy unit in ice, dealing (45 + 90% Total INT) Magic Damage and freezing them for 1 turn.";
+  manaCost2.innerHTML = "Mana Cost: 40";
+  cooldown2.innerHTML = "Cooldown: 5 Turns";
 
   // Third Skill Properties
-  skillName3.innerHTML = "lorem ipsum";
+  skillName3.innerHTML = "Mana Shield";
   imageSkill3.src = "lorem ipsum";
-  skillDescription3.innerHTML = "lorem ipsum";
-  manaCost3.innerHTML = "lorem ipsum";
-  cooldown3.innerHTML = "lorem ipsum";
+  skillDescription3.innerHTML =
+    "Generates a protective barrier that transforms incoming damage into mana over a duration of 3 turns.";
+  manaCost3.innerHTML = "Mana Cost: 50";
+  cooldown3.innerHTML = "Cooldown: 4 Turns";
 
   // Fourth Skill Properties
-  skillName4.innerHTML = "lorem ipsum";
+  skillName4.innerHTML = "Silencing Blast";
   imageSkill4.src = "lorem ipsum";
-  skillDescription4.innerHTML = "lorem ipsum";
-  manaCost4.innerHTML = "lorem ipsum";
-  cooldown4.innerHTML = "lorem ipsum";
+  skillDescription4.innerHTML =
+    "The mage releases a powerful burst of magical energy, dealing (40 + 90% Total INT) Magic Damage to a single target and silencing them for 1 turn, preventing them from using spells.";
+  manaCost4.innerHTML = "Mana Cost: 45";
+  cooldown4.innerHTML = "Cooldown: 3 Turns";
 
   // Fifth Skill Properties
-  skillName5.innerHTML = "lorem ipsum";
+  skillName5.innerHTML = "Life Drain";
   imageSkill5.src = "lorem ipsum";
-  skillDescription5.innerHTML = "lorem ipsum";
-  manaCost5.innerHTML = "lorem ipsum";
-  cooldown5.innerHTML = "lorem ipsum";
+  skillDescription5.innerHTML =
+    "The mage taps into the dark arts, draining (25 + 50% Total INT) health from the enemy and adding it to their own HP pool.";
+  manaCost5.innerHTML = "Mana Cost: 35";
+  cooldown5.innerHTML = "Cooldown: 4 Turns";
 });
 
 //ASSASIN SKILLS LIST
