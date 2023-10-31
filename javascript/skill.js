@@ -33,7 +33,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   //First Skill Properties
   skillName1.innerHTML = `Cleave`;
   imageSkill1.src = `icon/skills/warrior/cleave.PNG`;
-  skillDescription1.innerHTML = `The warrior delivers a powerful, sweeping attack to enemy dealing
+  skillDescription1.innerHTML = `Delivers a powerful, sweeping attack to enemy dealing
   (20 + 50% Total STR) Physical Damage.`;
   manaCost1.innerHTML = `Mana Cost: 15`;
   cooldown1.innerHTML = `Cooldown: 2 Turns`;
@@ -41,16 +41,15 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   //Second Skill Properties
   skillName2.innerHTML = `Crushing Blow`;
   imageSkill2.src = `icon/skills/warrior/crushingBlow.PNG`;
-  skillDescription2.innerHTML = `The warrior strikes an opponent with immense force, dealing (30 +
-    100% Total STR) Physical Damage. This attack also has a 50% chance
-    to stun the opponent for 1 turn.`;
+  skillDescription2.innerHTML = `Strikes an opponent with immense force, dealing (30 +
+    100% Total STR) Physical Damage. This attack also stun the enemy for 1 turn.`;
   manaCost2.innerHTML = `Mana Cost: 20`;
   cooldown2.innerHTML = `Cooldown: 3 Turns`;
 
   //Third Skill Properties
   skillName3.innerHTML = `Raging Frenzy`;
   imageSkill3.src = `icon/skills/warrior/ragingFrenzy.PNG`;
-  skillDescription3.innerHTML = `The warrior enters a state of pure rage, increasing their Total
+  skillDescription3.innerHTML = `Enters a state of pure rage, increasing their Total
   Attack Damage by 30% for 3 turns.`;
   manaCost3.innerHTML = `Mana Cost: 20`;
   cooldown3.innerHTML = `Cooldown: 3 Turns`;
@@ -67,7 +66,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   skillName5.innerHTML = `Defensive Stance`;
   imageSkill5.src = `icon/skills/warrior/defensiveStance.PNG`;
   skillDescription5.innerHTML = `Boosts the warrior's defenses for 50% in 3 turns while reducing
-  their damage output by 50% for the same duration.`;
+  character damage output by 50% for the same duration.`;
   manaCost5.innerHTML = `Mana Cost: 20`;
   cooldown5.innerHTML = `Cooldown: 4 Turns`;
 });
@@ -77,7 +76,7 @@ document.getElementById("MageSelected").addEventListener("click", () => {
   // First Skill Properties
   skillName1.innerHTML = `Fireball`;
   imageSkill1.src = `icon/skills/mage/fireball.PNG`;
-  skillDescription1.innerHTML = `The mage hurls a searing fireball at the enemy, dealing (25 + 60% Total INT) Magic Damage.`;
+  skillDescription1.innerHTML = `Hurls a searing fireball at the enemy, dealing (25 + 60% Total INT) Magic Damage.`;
   manaCost1.innerHTML = `Mana Cost: 20`;
   cooldown1.innerHTML = `Cooldown: 2 Turns`;
 
@@ -98,7 +97,7 @@ document.getElementById("MageSelected").addEventListener("click", () => {
   // Fourth Skill Properties
   skillName4.innerHTML = `Shadowmute`;
   imageSkill4.src = `icon/skills/mage/shadowMute.PNG`;
-  skillDescription4.innerHTML = `The mage releases a powerful burst of magical energy, dealing (40 + 90% Total INT) Magic Damage to a single target and silencing them for 1 turn, preventing them from using spells.`;
+  skillDescription4.innerHTML = `Release a powerful burst of magical energy, dealing (40 + 90% Total INT) Magic Damage to a single target and silencing them for 1 turn, preventing them from using spells.`;
   manaCost4.innerHTML = `Mana Cost: 45`;
   cooldown4.innerHTML = `Cooldown: 3 Turns`;
 
@@ -115,35 +114,35 @@ document.getElementById("AssassinSelected").addEventListener("click", () => {
   // First Skill Properties
   skillName1.innerHTML = `Backstab`;
   imageSkill1.src = `icon/skills/assassin/backstab.PNG`;
-  skillDescription1.innerHTML = `The assassin sneaks up on their target and delivers a deadly backstab, dealing (20 + 50% Total DEX) Physical Damage and having a 50% chance to critically hit for double damage.`;
+  skillDescription1.innerHTML = `Sneaks up on enemy and delivers a deadly backstab, dealing (20 + 50% Total DEX) Physical Damage and having a 50% chance to critically hit for double damage.`;
   manaCost1.innerHTML = `Energy Cost: 20`;
   cooldown1.innerHTML = `Cooldown: 2 Turns`;
 
   // Second Skill Properties
   skillName2.innerHTML = `Deadly Throw`;
   imageSkill2.src = `icon/skills/assassin/deadlyThrow.PNG`;
-  skillDescription2.innerHTML = `Expertly throws a deadly dagger at the enemy, dealing (25 + 70% Total DEX) Physical Damage from a distance. This skill also has a 50% chance to apply a bleeding effect, causing additional damage over 2 turns.`;
+  skillDescription2.innerHTML = `Expertly throws a deadly dagger at the enemy, dealing (25 + 70% Total DEX) Physical Damage. This skill also apply a bleeding effect, causing 10 additional damage over 2 turns.`;
   manaCost2.innerHTML = `Energy Cost: 20`;
-  cooldown2.innerHTML = `Cooldown: 3 Turns`;
+  cooldown2.innerHTML = `Cooldown: 4 Turns`;
 
   // Third Skill Properties
   skillName3.innerHTML = `Venomous Coating`;
   imageSkill3.src = `icon/skills/assassin/venomousCoating.PNG`;
-  skillDescription3.innerHTML = `Applies a potent venom to their weapon, enhancing their attacks. For the next 3 turns, the assassin's attacks deal additional poison damage, causing (10 + 40% Total DEX) damage over time. This effect does not stack.`;
+  skillDescription3.innerHTML = `Applies a potent venom to weapon for the next 3 turns, the assassin's attacks deal additional (10 + 50% Total DEX) poison damage over time. This effect does not stack.`;
   manaCost3.innerHTML = `Energy Cost: 30`;
   cooldown3.innerHTML = `Cooldown: 5 Turns`;
 
   // Fourth Skill Properties
   skillName4.innerHTML = `Vampiric Strike`;
   imageSkill4.src = `icon/skills/assassin/vampiricStrike.PNG`;
-  skillDescription4.innerHTML = `The assassin delivers a vampiric strike, draining the enemy's life force. This attack deals (20 + 60% Total DEX) Physical Damage and heals the assassin for an amount equal to 50% of the damage dealt.`;
+  skillDescription4.innerHTML = `Delivers a vampiric strike, draining the enemy's life force. This attack deals (20 + 60% Total DEX) Physical Damage and heals the assassin for an amount equal to 50% of the damage dealt.`;
   manaCost4.innerHTML = `Energy Cost: 35`;
   cooldown4.innerHTML = `Cooldown: 4 Turns`;
 
   // Fifth Skill Properties
   skillName5.innerHTML = `Assassinate`;
   imageSkill5.src = `icon/skills/assassin/assassinate.PNG`;
-  skillDescription5.innerHTML = `Targets a weakened enemy, delivering a lethal blow that instantly kills the enemy if their health is below 10%. Otherwise, it deals (50 + 100% Total DEX) Physical Damage.`;
+  skillDescription5.innerHTML = `Deliver a lethal blow that instantly kills the enemy if their health is below 10%. Otherwise, it deals (50 + 100% Total DEX) Physical Damage.`;
   manaCost5.innerHTML = `Energy Cost: 50`;
   cooldown5.innerHTML = `Cooldown: 6 Turns`;
 });
@@ -175,14 +174,14 @@ document.getElementById("ArcherSelected").addEventListener("click", () => {
   // Fourth Skill Properties
   skillName4.innerHTML = `Poison Arrow`;
   imageSkill4.src = `icon/skills/archer/poisonArrow.PNG`;
-  skillDescription4.innerHTML = `Fires a poisoned coated arrow at dealing (30 + 70% Total DEX) Physical Damage and applying a potent poison that deals 10 damage over time for 2 turns.`;
+  skillDescription4.innerHTML = `Fires a poisoned coated arrow that deals (30 + 70% Total DEX) Physical Damage and deals 10 damage over time for 2 turns.`;
   manaCost4.innerHTML = `Mana Cost: 35`;
   cooldown4.innerHTML = `Cooldown: 5 Turns`;
 
   // Fifth Skill Properties
   skillName5.innerHTML = `Headshot`;
   imageSkill5.src = `icon/skills/archer/headshot.PNG`;
-  skillDescription5.innerHTML = `Aim for the enemy's head, dealing (50 + 100% Total DEX) Physical Damage and stunning the target for 1 turn..`;
+  skillDescription5.innerHTML = `Take precise aim at the enemy's head, dealing (50 + 100% Total DEX) Physical Damage, stunning the target for 1 turn, and reducing the enemy's current health by 10%`;
   manaCost5.innerHTML = `Mana Cost: 40`;
   cooldown5.innerHTML = `Cooldown: 6 Turns`;
 });
