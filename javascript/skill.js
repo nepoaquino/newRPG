@@ -50,7 +50,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   skillName3.innerHTML = `Raging Frenzy`;
   imageSkill3.src = `icon/skills/warrior/ragingFrenzy.PNG`;
   skillDescription3.innerHTML = `Enters a state of pure rage, increasing your Total
-  Attack Damage by 30% for 3 turns.`;
+  Attack Damage by 40% for the next 3 turns.`;
   manaCost3.innerHTML = `Mana Cost: 20`;
   cooldown3.innerHTML = `Cooldown: 3 Turns`;
 
@@ -65,7 +65,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   //Fifth Skill Properties
   skillName5.innerHTML = `Defensive Stance`;
   imageSkill5.src = `icon/skills/warrior/defensiveStance.PNG`;
-  skillDescription5.innerHTML = `Boosts the your defense by 50% but also reducing
+  skillDescription5.innerHTML = `Boosts your defense by 50% but also reducing
   your damage output by 20% for the next 3 turns.`;
   manaCost5.innerHTML = `Mana Cost: 20`;
   cooldown5.innerHTML = `Cooldown: 4 Turns`;
