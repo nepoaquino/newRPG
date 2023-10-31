@@ -105,7 +105,6 @@ document.getElementById("MageSelected").addEventListener("click", () => {
   // Fifth Skill Properties
   skillName5.innerHTML = `Life Drain`;
   imageSkill5.src = `icon/skills/mage/lifeDrain.PNG`;
-  e;
   skillDescription5.innerHTML = `Taps into the dark arts, draining (25 + 50% Total INT) health from the enemy and adding it to your own HP pool.`;
   manaCost5.innerHTML = `Mana Cost: 35`;
   cooldown5.innerHTML = `Cooldown: 4 Turns`;
