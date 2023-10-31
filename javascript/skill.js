@@ -40,7 +40,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
 
   //Second Skill Properties
   skillName2.innerHTML = `Crushing Blow`;
-  imageSkill2.src = `icon/skills/warrior/blow.PNG`;
+  imageSkill2.src = `icon/skills/warrior/crushingBlow.PNG`;
   skillDescription2.innerHTML = `The warrior strikes an opponent with immense force, dealing (30 +
     100% Total STR) Physical Damage. This attack also has a 50% chance
     to stun the opponent for 1 turn.`;
@@ -49,7 +49,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
 
   //Third Skill Properties
   skillName3.innerHTML = `Raging Frenzy`;
-  imageSkill3.src = `icon/skills/warrior/rage.PNG`;
+  imageSkill3.src = `icon/skills/warrior/ragingFrenzy.PNG`;
   skillDescription3.innerHTML = `The warrior enters a state of pure rage, increasing their Total
   Attack Damage by 30% for 3 turns.`;
   manaCost3.innerHTML = `Mana Cost: 20`;
@@ -57,7 +57,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
 
   //Fourth Skill Properties
   skillName4.innerHTML = `Mend Wounds`;
-  imageSkill4.src = `icon/skills/warrior/heal.PNG`;
+  imageSkill4.src = `icon/skills/warrior/mendWounds.PNG`;
   skillDescription4.innerHTML = `Restores 30% of the warrior's health, allowing them to recover
   during battles.`;
   manaCost4.innerHTML = `Mana Cost: 25`;
@@ -65,7 +65,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
 
   //Fifth Skill Properties
   skillName5.innerHTML = `Defensive Stance`;
-  imageSkill5.src = `icon/skills/warrior/defensive.PNG`;
+  imageSkill5.src = `icon/skills/warrior/defensiveStance.PNG`;
   skillDescription5.innerHTML = `Boosts the warrior's defenses for 50% in 3 turns while reducing
   their damage output by 50% for the same duration.`;
   manaCost5.innerHTML = `Mana Cost: 20`;
@@ -113,75 +113,76 @@ document.getElementById("MageSelected").addEventListener("click", () => {
 // ASSASSIN SKILLS LIST
 document.getElementById("AssassinSelected").addEventListener("click", () => {
   // First Skill Properties
-  skillName1.innerHTML = `lorem ipsum`;
-  imageSkill1.src = `lorem ipsum`;
-  skillDescription1.innerHTML = `lorem ipsum`;
-  manaCost1.innerHTML = `lorem ipsum`;
-  cooldown1.innerHTML = `lorem ipsum`;
+  skillName1.innerHTML = `Backstab`;
+  imageSkill1.src = `icon/skills/assassin/backstab.PNG`;
+  skillDescription1.innerHTML = `The assassin sneaks up on their target and delivers a deadly backstab, dealing (20 + 50% Total DEX) Physical Damage and having a 50% chance to critically hit for double damage.`;
+  manaCost1.innerHTML = `Energy Cost: 20`;
+  cooldown1.innerHTML = `Cooldown: 2 Turns`;
 
   // Second Skill Properties
-  skillName2.innerHTML = `lorem ipsum`;
-  imageSkill2.src = `lorem ipsum`;
-  skillDescription2.innerHTML = `lorem ipsum`;
-  manaCost2.innerHTML = `lorem ipsum`;
-  cooldown2.innerHTML = `lorem ipsum`;
+  skillName2.innerHTML = `Deadly Throw`;
+  imageSkill2.src = `icon/skills/assassin/deadlyThrow.PNG`;
+  skillDescription2.innerHTML = `Expertly throws a deadly dagger at the enemy, dealing (25 + 70% Total DEX) Physical Damage from a distance. This skill also has a 50% chance to apply a bleeding effect, causing additional damage over 2 turns.`;
+  manaCost2.innerHTML = `Energy Cost: 20`;
+  cooldown2.innerHTML = `Cooldown: 3 Turns`;
 
   // Third Skill Properties
-  skillName3.innerHTML = `lorem ipsum`;
-  imageSkill3.src = `lorem ipsum`;
-  skillDescription3.innerHTML = `lorem ipsum`;
-  manaCost3.innerHTML = `lorem ipsum`;
-  cooldown3.innerHTML = `lorem ipsum`;
+  skillName3.innerHTML = `Venomous Coating`;
+  imageSkill3.src = `icon/skills/assassin/venomousCoating.PNG`;
+  skillDescription3.innerHTML = `Applies a potent venom to their weapon, enhancing their attacks. For the next 3 turns, the assassin's attacks deal additional poison damage, causing (10 + 40% Total DEX) damage over time. This effect does not stack.`;
+  manaCost3.innerHTML = `Energy Cost: 30`;
+  cooldown3.innerHTML = `Cooldown: 5 Turns`;
 
   // Fourth Skill Properties
-  skillName4.innerHTML = `lorem ipsum`;
-  imageSkill4.src = `lorem ipsum`;
-  skillDescription4.innerHTML = `lorem ipsum`;
-  manaCost4.innerHTML = `lorem ipsum`;
-  cooldown4.innerHTML = `lorem ipsum`;
+  skillName4.innerHTML = `Vampiric Strike`;
+  imageSkill4.src = `icon/skills/assassin/vampiricStrike.PNG`;
+  skillDescription4.innerHTML = `The assassin delivers a vampiric strike, draining the enemy's life force. This attack deals (20 + 60% Total DEX) Physical Damage and heals the assassin for an amount equal to 50% of the damage dealt.`;
+  manaCost4.innerHTML = `Energy Cost: 35`;
+  cooldown4.innerHTML = `Cooldown: 4 Turns`;
 
   // Fifth Skill Properties
-  skillName5.innerHTML = `lorem ipsum`;
-  imageSkill5.src = `lorem ipsum`;
-  skillDescription5.innerHTML = `lorem ipsum`;
-  manaCost5.innerHTML = `lorem ipsum`;
-  cooldown5.innerHTML = `lorem ipsum`;
+  skillName5.innerHTML = `Assassinate`;
+  imageSkill5.src = `icon/skills/assassin/assassinate.PNG`;
+  skillDescription5.innerHTML = `Targets a weakened enemy, delivering a lethal blow that instantly kills the enemy if their health is below 10%. Otherwise, it deals (50 + 100% Total DEX) Physical Damage.`;
+  manaCost5.innerHTML = `Energy Cost: 50`;
+  cooldown5.innerHTML = `Cooldown: 6 Turns`;
 });
 
 // ARCHER SKILLS LIST
 document.getElementById("ArcherSelected").addEventListener("click", () => {
   // First Skill Properties
-  skillName1.innerHTML = `lorem ipsum`;
-  imageSkill1.src = `lorem ipsum`;
-  skillDescription1.innerHTML = `lorem ipsum`;
-  manaCost1.innerHTML = `lorem ipsum`;
-  cooldown1.innerHTML = `lorem ipsum`;
+  skillName1.innerHTML = `Precision Shot`;
+  imageSkill1.src = `icon/skills/archer/precisionShot.PNG`;
+  skillDescription1.innerHTML = `Takes precise aim and delivers a true strike that bypasses the enemy's evasion, inflicting (30 + 50% Total DEX) Physical Damage. This attack is assured to strike its intended target`;
 
-  // Second Skill Properties
-  skillName2.innerHTML = `lorem ipsum`;
-  imageSkill2.src = `lorem ipsum`;
-  skillDescription2.innerHTML = `lorem ipsum`;
-  manaCost2.innerHTML = `lorem ipsum`;
-  cooldown2.innerHTML = `lorem ipsum`;
-
-  // Third Skill Properties
-  skillName3.innerHTML = `lorem ipsum`;
-  imageSkill3.src = `lorem ipsum`;
-  skillDescription3.innerHTML = `lorem ipsum`;
-  manaCost3.innerHTML = `lorem ipsum`;
-  cooldown3.innerHTML = `lorem ipsum`;
-
-  // Fourth Skill Properties
-  skillName4.innerHTML = `lorem ipsum`;
-  imageSkill4.src = `lorem ipsum`;
-  skillDescription4.innerHTML = `lorem ipsum`;
-  manaCost4.innerHTML = `lorem ipsum`;
-  cooldown4.innerHTML = `lorem ipsum`;
+  manaCost1.innerHTML = `Energy Cost: 15`;
+  cooldown1.innerHTML = `Cooldown: 2 Turns`;
 
   // Fifth Skill Properties
-  skillName5.innerHTML = `lorem ipsum`;
-  imageSkill5.src = `lorem ipsum`;
-  skillDescription5.innerHTML = `lorem ipsum`;
-  manaCost5.innerHTML = `lorem ipsum`;
-  cooldown5.innerHTML = `lorem ipsum`;
+  skillName2.innerHTML = `Explosive Shot`;
+  imageSkill2.src = `icon/skills/archer/explosiveShot.PNG`;
+  skillDescription2.innerHTML = `Fires an explosive arrow at the enemy, dealing (45 + 90% Total DEX) Physical Damage and applying a burning effect that deals 10 damage over time for 2 turns.`;
+  manaCost2.innerHTML = `Mana Cost: 50`;
+  cooldown2.innerHTML = `Cooldown: 6 Turns`;
+
+  // Third Skill Properties
+  skillName3.innerHTML = `WindRun`;
+  imageSkill3.src = `icon/skills/archer/windRun.PNG`;
+  skillDescription3.innerHTML = `Harnesses the power of the wind, granting incredible speed. The archer is guaranteed to evade all physical attacks from the enemy for the next 2 turns.`;
+  manaCost3.innerHTML = `Mana Cost: 45`;
+  cooldown3.innerHTML = `Cooldown: 7 Turns`;
+
+  // Fourth Skill Properties
+  skillName4.innerHTML = `Poison Arrow`;
+  imageSkill4.src = `icon/skills/archer/poisonArrow.PNG`;
+  skillDescription4.innerHTML = `Fires a poisoned coated arrow at dealing (30 + 70% Total DEX) Physical Damage and applying a potent poison that deals 10 damage over time for 2 turns.`;
+  manaCost4.innerHTML = `Mana Cost: 35`;
+  cooldown4.innerHTML = `Cooldown: 5 Turns`;
+
+  // Fifth Skill Properties
+  skillName5.innerHTML = `Headshot`;
+  imageSkill5.src = `icon/skills/archer/headshot.PNG`;
+  skillDescription5.innerHTML = `Aim for the enemy's head, dealing (50 + 100% Total DEX) Physical Damage and stunning the target for 1 turn..`;
+  manaCost5.innerHTML = `Mana Cost: 40`;
+  cooldown5.innerHTML = `Cooldown: 6 Turns`;
 });
