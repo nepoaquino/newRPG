@@ -49,7 +49,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   //Third Skill Properties
   skillName3.innerHTML = `Raging Frenzy`;
   imageSkill3.src = `icon/skills/warrior/ragingFrenzy.PNG`;
-  skillDescription3.innerHTML = `Enters a state of pure rage, increasing their Total
+  skillDescription3.innerHTML = `Enters a state of pure rage, increasing your Total
   Attack Damage by 30% for 3 turns.`;
   manaCost3.innerHTML = `Mana Cost: 20`;
   cooldown3.innerHTML = `Cooldown: 3 Turns`;
@@ -57,7 +57,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   //Fourth Skill Properties
   skillName4.innerHTML = `Mend Wounds`;
   imageSkill4.src = `icon/skills/warrior/mendWounds.PNG`;
-  skillDescription4.innerHTML = `Restores 30% of the warrior's health, allowing them to recover
+  skillDescription4.innerHTML = `Restores 30% health, allowing you to recover
   during battles.`;
   manaCost4.innerHTML = `Mana Cost: 25`;
   cooldown4.innerHTML = `Cooldown: 5 Turns`;
@@ -65,8 +65,8 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
   //Fifth Skill Properties
   skillName5.innerHTML = `Defensive Stance`;
   imageSkill5.src = `icon/skills/warrior/defensiveStance.PNG`;
-  skillDescription5.innerHTML = `Boosts the warrior's defenses for 50% in 3 turns while reducing
-  character damage output by 50% for the same duration.`;
+  skillDescription5.innerHTML = `Boosts the your defense by 50% but also reducing
+  your damage output by 20% for the next 3 turns.`;
   manaCost5.innerHTML = `Mana Cost: 20`;
   cooldown5.innerHTML = `Cooldown: 4 Turns`;
 });
@@ -76,7 +76,7 @@ document.getElementById("MageSelected").addEventListener("click", () => {
   // First Skill Properties
   skillName1.innerHTML = `Fireball`;
   imageSkill1.src = `icon/skills/mage/fireball.PNG`;
-  skillDescription1.innerHTML = `Hurls a searing fireball at the enemy, dealing (25 + 60% Total INT) Magic Damage.`;
+  skillDescription1.innerHTML = `Hurls a searing fireball at the enemy, dealing (25 + 60% Total INT) Magic Damage and causing 10 additional damage over 2 turns.`;
   manaCost1.innerHTML = `Mana Cost: 20`;
   cooldown1.innerHTML = `Cooldown: 2 Turns`;
 
@@ -135,7 +135,7 @@ document.getElementById("AssassinSelected").addEventListener("click", () => {
   // Fourth Skill Properties
   skillName4.innerHTML = `Vampiric Strike`;
   imageSkill4.src = `icon/skills/assassin/vampiricStrike.PNG`;
-  skillDescription4.innerHTML = `Delivers a vampiric strike, draining the enemy's life force. This attack deals (20 + 60% Total DEX) Physical Damage and heals the assassin for an amount equal to 50% of the damage dealt.`;
+  skillDescription4.innerHTML = `Delivers a vampiric strike, draining the enemy's life force. This attack deals (20 + 60% Total DEX) Physical Damage and heals you for an amount equal to 50% of the damage dealt.`;
   manaCost4.innerHTML = `Energy Cost: 35`;
   cooldown4.innerHTML = `Cooldown: 4 Turns`;
 
@@ -167,7 +167,7 @@ document.getElementById("ArcherSelected").addEventListener("click", () => {
   // Third Skill Properties
   skillName3.innerHTML = `WindRun`;
   imageSkill3.src = `icon/skills/archer/windRun.PNG`;
-  skillDescription3.innerHTML = `Harnesses the power of the wind, granting incredible speed. The archer is guaranteed to evade all physical attacks from the enemy for the next 2 turns.`;
+  skillDescription3.innerHTML = `Harnesses the power of the wind, granting incredible speed. Guaranteed to evade all physical attacks from the enemy for the next 2 turns.`;
   manaCost3.innerHTML = `Mana Cost: 45`;
   cooldown3.innerHTML = `Cooldown: 7 Turns`;
 
@@ -181,7 +181,7 @@ document.getElementById("ArcherSelected").addEventListener("click", () => {
   // Fifth Skill Properties
   skillName5.innerHTML = `Headshot`;
   imageSkill5.src = `icon/skills/archer/headshot.PNG`;
-  skillDescription5.innerHTML = `Take precise aim at the enemy's head, dealing (50 + 100% Total DEX) Physical Damage, stunning the target for 1 turn, and reducing the enemy's current health by 10%`;
+  skillDescription5.innerHTML = `Take precise aim at the enemy's head, dealing (50 + 150% Total DEX) Physical Damage, stunning the target for 1 turn`;
   manaCost5.innerHTML = `Mana Cost: 40`;
   cooldown5.innerHTML = `Cooldown: 6 Turns`;
 });
