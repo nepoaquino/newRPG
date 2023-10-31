@@ -76,7 +76,7 @@ document.getElementById("WarriorSelected").addEventListener("click", () => {
 document.getElementById("MageSelected").addEventListener("click", () => {
   // First Skill Properties
   skillName1.innerHTML = "Fireball";
-  imageSkill1.src = "icon/skills/mage/fireball.PNG";
+  imageSkill1.src = `icon/skills/mage/fireball.PNG`;
   skillDescription1.innerHTML =
     "The mage hurls a searing fireball at the enemy, dealing (25 + 60% Total INT) Magic Damage.";
   manaCost1.innerHTML = "Mana Cost: 20";
@@ -84,7 +84,7 @@ document.getElementById("MageSelected").addEventListener("click", () => {
 
   // Second Skill Properties
   skillName2.innerHTML = "Frosbite";
-  imageSkill2.src = "icon/skills/mage/frostbite.PNG";
+  imageSkill2.src = `icon/skills/mage/frostbite.PNG`;
   skillDescription2.innerHTML =
     "Encases an enemy unit in ice, dealing (45 + 90% Total INT) Magic Damage and freezing them for 1 turn.";
   manaCost2.innerHTML = "Mana Cost: 40";
