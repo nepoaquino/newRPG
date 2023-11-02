@@ -92,3 +92,9 @@
   border: none;
   cursor: pointer;
 }
+
+#gameSettingsContainer button:hover,
+#gameSettingsContainer button:active {
+  background-color: #ffcf76;
+  color: black;
+}
