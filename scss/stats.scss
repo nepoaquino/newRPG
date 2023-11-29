@@ -1,0 +1,111 @@
+#statsOverview {
+    font-family: "Times New Roman", Times, serif;
+    display: none; /* NONE OR BLOCK */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333333f5;
+    color: #efefefef;
+    border: 1px solid #111111f0;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 95%;
+    max-width: 650px;
+    z-index: 999;
+    padding: 20px;
+  
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bolder;
+      text-transform: uppercase;
+      color: transparent;
+      background-size: 300% 100%;
+      animation: color-change 5s ease infinite;
+      background-image: radial-gradient(circle, #ffcf76, #000000, rgb(107, 86, 50));
+      -webkit-background-clip: text;
+      background-clip: text;
+      white-space: nowrap;
+      margin-bottom: 10px;
+    }
+  
+    #statsView {
+      text-align: center;
+  
+      ul {
+        font-size: 1.2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        list-style: none;
+        padding: 0;
+        line-height: 3rem;
+      }
+    }
+  
+    /* Stat modifiers section */
+    #statModifiers {
+      ul {
+        list-style: none;
+        padding: 1rem 4rem;
+  
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          justify-content: space-between;
+          padding: 0.5rem 0;
+  
+          .buttons button {
+            font-size: 1.5rem;
+            padding: 7.5px 15px;
+            background-color: #666;
+            color: #efefefef;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+  
+            &:hover,
+            &:active {
+              background-color: #ffcf76;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  
+    #availablePointsText {
+      color: transparent;
+      background-size: 100% 100%;
+      background-image: radial-gradient(circle, #ffcf76, rgb(112, 84, 36));
+      -webkit-background-clip: text;
+      background-clip: text;
+      white-space: nowrap;
+      font-size: 1.5rem;
+    }
+  
+    #availablePointsValue {
+      font-weight: 900;
+      font-size: 1.8rem;
+    }
+  
+    #statsConfirm,
+    #statsCancel {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 7.5px 15px;
+      background-color: #666;
+      color: #efefefef;
+      border: none;
+      margin: 15px 10px;
+  
+      &:hover,
+      &:active {
+        background-color: #ffcf76;
+        color: black;
+      }
+    }
+  }
+  
