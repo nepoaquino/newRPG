@@ -45,6 +45,11 @@
   margin-bottom: -5px;
 }
 
+#levelContainer > p {
+  text-align: center;
+  font-weight: bolder;
+}
+
 #characterImageContainer {
   width: 12rem;
   /* background-color: rgba(245, 222, 179, 0.255); */
