@@ -137,8 +137,8 @@
 .experience {
   background: linear-gradient(
     to right,
-    #1dff1d,
-    #80ff80
+    #ffd700,
+    #ebc341
   ); /* Green gradient for Experience */
   width: 50%;
   max-width: 100%;
@@ -151,13 +151,12 @@
   flex-direction: column;
   align-items: center;
   margin: 10px auto;
-  height: 100%; /* Set a fixed height (adjust this value as needed) */
-  /* max-height: 800px; To ensure it doesn't exceed the parent's height */
+  height: 80dvh;
   background-image: url("../App_Design/Select_Gender/paperStoryBackground.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 5em;
+  padding-bottom: 3em;
   /* overflow-y: auto; Add scroll for vertical overflow */
 }
 
